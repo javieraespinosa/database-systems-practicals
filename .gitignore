@@ -1,0 +1,11 @@
+# Ignore MAC files
+.DS_Store
+
+# Ignore all .pyc files
+*.pyc
+
+# Ignore all files in the .vscode directory
+.vscode
+
+# Ignore these directories
+tmp/

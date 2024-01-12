@@ -1,0 +1,3605 @@
+group: Olympic Games
+
+Country = { 
+	NOC:string, name:string, athletesNr:number, medalsNr:number 
+	'USA', 'United States of America', 92, 25.0
+ 	'URS', 'Soviet Union', 74, 12.0
+ 	'FRG', 'West Germany', 72, 7.0
+ 	'GBR', 'Great Britain', 70, 4.0
+ 	'GDR', 'East Germany', 45, 6.0
+ 	'FRA', 'France', 40, 1.0
+ 	'HUN', 'Hungary', 37, 7.0
+ 	'POL', 'Poland', 34, 2.0
+ 	'CAN', 'Canada', 32, 0.0
+ 	'AUS', 'Australia', 31, 6.0
+ 	'MEX', 'Mexico', 27, 1.0
+ 	'SUI', 'Switzerland', 26, 0.0
+ 	'KEN', 'Kenya', 25, 7.0
+ 	'SWE', 'Sweden', 25, 0.0
+ 	'ITA', 'Italy', 24, 2.0
+ 	'JPN', 'Japan', 21, 1.0
+ 	'BEL', 'Belgium', 20, 0.0
+ 	'TPE', 'Chinese Taipei', 20, 1.0
+ 	'CUB', 'Cuba', 20, 0.0
+ 	'JAM', 'Jamaica', 17, 1.0
+ 	'ESA', 'El Salvador', 15, 0.0
+ 	'TCH', 'Czechoslovakia', 14, 2.0
+ 	'ETH', 'Ethiopia', 14, 2.0
+ 	'NED', 'Netherlands', 13, 1.0
+ 	'NGR', 'Nigeria', 13, 0.0
+ 	'AUT', 'Austria', 12, 2.0
+ 	'FIN', 'Finland', 12, 1.0
+ 	'NCA', 'Nicaragua', 12, 0.0
+ 	'YUG', 'Yugoslavia', 12, 0.0
+ 	'ROU', 'Romania', 11, 4.0
+ 	'BAH', 'Bahamas', 10, 0.0
+ 	'BUL', 'Bulgaria', 10, 0.0
+ 	'MAS', 'Malaysia', 10, 0.0
+ 	'NZL', 'New Zealand', 10, 1.0
+ 	'ESP', 'Spain', 10, 0.0
+ 	'ARG', 'Argentina', 9, 0.0
+ 	'CHI', 'Chile', 9, 0.0
+ 	'GHA', 'Ghana', 9, 0.0
+ 	'SEN', 'Senegal', 8, 0.0
+ 	'DOM', 'Dominican Republic', 7, 0.0
+ 	'GRE', 'Greece', 7, 0.0
+ 	'GUA', 'Guatemala', 7, 0.0
+ 	'PHI', 'Philippines', 7, 0.0
+ 	'CRC', 'Costa Rica', 6, 0.0
+ 	'DEN', 'Denmark', 6, 0.0
+ 	'HON', 'Honduras', 6, 0.0
+ 	'IRL', 'Ireland', 6, 0.0
+ 	'NOR', 'Norway', 6, 0.0
+ 	'PUR', 'Puerto Rico', 6, 0.0
+ 	'UGA', 'Uganda', 6, 0.0
+ 	'COL', 'Colombia', 5, 0.0
+ 	'MAD', 'Madagascar', 5, 0.0
+ 	'TTO', 'Trinidad and Tobago', 5, 0.0
+ 	'URU', 'Uruguay', 5, 0.0
+ 	'CHA', 'Chad', 4, 0.0
+ 	'CIV', 'Côte d`Ivoire', 4, 0.0
+ 	'MAR', 'Morocco', 4, 0.0
+ 	'PER', 'Peru', 4, 0.0
+ 	'KOR', 'Republic of Korea', 4, 0.0
+ 	'SUD', 'Sudan', 4, 0.0
+ 	'TUN', 'Tunisia', 4, 2.0
+ 	'TUR', 'Turkey', 4, 0.0
+ 	'TAN', 'United Republic of Tanzania', 4, 0.0
+ 	'VEN', 'Venezuela', 4, 0.0
+ 	'BRA', 'Brazil', 3, 1.0
+ 	'ISL', 'Iceland', 3, 0.0
+ 	'ISR', 'Israel', 3, 0.0
+ 	'LIE', 'Liechtenstein', 3, 0.0
+ 	'SLE', 'Sierra Leone', 3, 0.0
+ 	'ZAM', 'Zambia', 3, 0.0
+ 	'BAR', 'Barbados', 2, 0.0
+ 	'BIZ', 'Belize', 2, 0.0
+ 	'BER', 'Bermuda', 2, 0.0
+ 	'IND', 'India', 2, 0.0
+ 	'KUW', 'Kuwait', 2, 0.0
+ 	'LUX', 'Luxembourg', 2, 0.0
+ 	'MYA', 'Myanmar', 2, 0.0
+ 	'SGP', 'Singapore', 2, 0.0
+ 	'ISV', 'Virgin Islands; US', 2, 0.0
+ 	'CMR', 'Cameroon', 1, 0.0
+ 	'CAF', 'Central African Republic', 1, 0.0
+ 	'ECU', 'Ecuador', 1, 0.0
+ 	'FIJ', 'Fiji', 1, 0.0
+ 	'GUY', 'Guyana', 1, 0.0
+ 	'IRI', 'Islamic Republic of Iran', 1, 0.0
+ 	'LBA', 'Libya', 1, 0.0
+ 	'MLI', 'Mali', 1, 0.0
+ 	'MGL', 'Mongolia', 1, 0.0
+ 	'POR', 'Portugal', 1, 0.0
+ 	'SRI', 'Sri Lanka', 1, 0.0
+ 	'SUR', 'Suriname', 1, 0.0
+ 	'VIE', 'Vietnam', 1, 0.0 
+}
+
+Discipline = { 
+	idDiscipline:number, category:string, name:string 
+	1, 'Athletics', 'Athletics Men`s 400 metres Hurdles'
+ 	2, 'Athletics', 'Athletics Men`s 100 metres'
+ 	3, 'Athletics', 'Athletics Men`s Long Jump'
+ 	4, 'Athletics', 'Athletics Men`s High Jump'
+ 	5, 'Athletics', 'Athletics Men`s 200 metres'
+ 	6, 'Athletics', 'Athletics Women`s Pentathlon'
+ 	7, 'Athletics', 'Athletics Men`s 800 metres'
+ 	8, 'Athletics', 'Athletics Men`s Marathon'
+ 	9, 'Athletics', 'Athletics Men`s 5;000 metres'
+ 	10, 'Athletics', 'Athletics Men`s 50 kilometres Walk'
+ 	11, 'Athletics', 'Athletics Women`s 80 metres Hurdles'
+ 	12, 'Athletics', 'Athletics Women`s 100 metres'
+ 	13, 'Athletics', 'Athletics Women`s 200 metres'
+ 	14, 'Athletics', 'Athletics Men`s 10;000 metres'
+ 	15, 'Athletics', 'Athletics Men`s Pole Vault'
+ 	16, 'Athletics', 'Athletics Men`s Triple Jump'
+ 	17, 'Athletics', 'Athletics Men`s 3;000 metres Steeplechase'
+ 	18, 'Athletics', 'Athletics Men`s Hammer Throw'
+ 	19, 'Athletics', 'Athletics Women`s Long Jump'
+ 	20, 'Athletics', 'Athletics Men`s 20 kilometres Walk'
+ 	21, 'Athletics', 'Athletics Women`s Javelin Throw'
+ 	22, 'Athletics', 'Athletics Men`s Decathlon'
+ 	23, 'Athletics', 'Athletics Men`s 1;500 metres'
+ 	24, 'Athletics', 'Athletics Men`s 110 metres Hurdles'
+ 	25, 'Athletics', 'Athletics Men`s 400 metres'
+ 	26, 'Athletics', 'Athletics Women`s Shot Put'
+ 	27, 'Athletics', 'Athletics Women`s High Jump'
+ 	28, 'Athletics', 'Athletics Women`s 400 metres'
+ 	29, 'Athletics', 'Athletics Men`s Shot Put'
+ 	30, 'Athletics', 'Athletics Women`s Discus Throw'
+ 	31, 'Athletics', 'Athletics Women`s 800 metres'
+ 	32, 'Athletics', 'Athletics Men`s Discus Throw'
+ 	33, 'Athletics', 'Athletics Men`s Javelin Throw' 
+}
+
+Event = { 
+	idEvent:number, idDiscipline:number, date:string, place:string, athletesNr:number, nature:string 
+	4, 2, '1968-10-16', 'Stadium C', 65, 'Final'
+ 	20, 14, '1968-10-20', 'Stadium C', 37, 'Final'
+ 	33, 24, '1968-10-12', 'Stadium A', 33, 'Heat'
+ 	34, 24, '1968-10-15', 'Stadium A', 33, 'Heat'
+ 	35, 24, '1968-10-20', 'Stadium A', 33, 'Final'
+ 	6, 23, '1968-10-15', 'Stadium C', 54, 'Heat'
+ 	7, 23, '1968-10-19', 'Stadium C', 54, 'Heat'
+ 	8, 23, '1968-10-22', 'Stadium C', 54, 'Final'
+ 	29, 20, '1968-10-21', 'Stadium B', 34, 'Heat'
+ 	30, 20, '1968-10-24', 'Stadium B', 34, 'Heat'
+ 	31, 20, '1968-10-26', 'Stadium B', 34, 'Final'
+ 	10, 5, '1968-10-19', 'Stadium C', 50, 'Heat'
+ 	9, 5, '1968-10-21', 'Stadium C', 50, 'Heat'
+ 	11, 5, '1968-10-24', 'Stadium C', 50, 'Final'
+ 	17, 17, '1968-10-14', 'Stadium C', 40, 'Heat'
+ 	15, 17, '1968-10-20', 'Stadium C', 40, 'Heat'
+ 	16, 17, '1968-10-26', 'Stadium C', 40, 'Final'
+ 	5, 25, '1968-10-22', 'Stadium A', 55, 'Final'
+ 	42, 1, '1968-10-16', 'Stadium A', 30, 'Heat'
+ 	40, 1, '1968-10-19', 'Stadium A', 30, 'Heat'
+ 	41, 1, '1968-10-24', 'Stadium A', 30, 'Final'
+ 	21, 10, '1968-10-15', 'Stadium B', 36, 'Heat'
+ 	22, 10, '1968-10-15', 'Stadium B', 36, 'Heat'
+ 	23, 10, '1968-10-16', 'Stadium B', 36, 'Final'
+ 	18, 9, '1968-10-23', 'Stadium B', 39, 'Final'
+ 	12, 7, '1968-10-26', 'Stadium B', 43, 'Final'
+ 	36, 22, '1968-10-21', 'Stadium C', 33, 'Final'
+ 	45, 32, '1968-10-13', 'Stadium B', 27, 'Heat'
+ 	44, 32, '1968-10-26', 'Stadium B', 27, 'Final'
+ 	57, 18, '1968-10-22', 'Stadium B', 22, 'Heat'
+ 	58, 18, '1968-10-23', 'Stadium B', 22, 'Heat'
+ 	56, 18, '1968-10-26', 'Stadium B', 22, 'Final'
+ 	19, 4, '1968-10-12', 'Stadium B', 39, 'Final'
+ 	46, 33, '1968-10-18', 'Stadium C', 27, 'Final'
+ 	27, 3, '1968-10-13', 'Stadium C', 35, 'Heat'
+ 	28, 3, '1968-10-14', 'Stadium C', 35, 'Final'
+ 	1, 8, '1968-10-18', 'Stadium A', 75, 'Heat'
+ 	2, 8, '1968-10-21', 'Stadium A', 75, 'Heat'
+ 	3, 8, '1968-10-25', 'Stadium A', 75, 'Final'
+ 	53, 15, '1968-10-13', 'Stadium A', 23, 'Heat'
+ 	55, 15, '1968-10-13', 'Stadium A', 23, 'Heat'
+ 	54, 15, '1968-10-24', 'Stadium A', 23, 'Final'
+ 	59, 29, '1968-10-14', 'Stadium A', 19, 'Heat'
+ 	60, 29, '1968-10-23', 'Stadium A', 19, 'Final'
+ 	32, 16, '1968-10-13', 'Stadium A', 34, 'Final'
+ 	13, 12, '1968-10-20', 'Stadium A', 42, 'Heat'
+ 	14, 12, '1968-10-21', 'Stadium A', 42, 'Final'
+ 	26, 13, '1968-10-18', 'Stadium A', 36, 'Heat'
+ 	24, 13, '1968-10-20', 'Stadium A', 36, 'Heat'
+ 	25, 13, '1968-10-26', 'Stadium A', 36, 'Final'
+ 	43, 28, '1968-10-14', 'Stadium C', 29, 'Final'
+ 	37, 11, '1968-10-20', 'Stadium A', 33, 'Final'
+ 	50, 31, '1968-10-19', 'Stadium B', 24, 'Final'
+ 	61, 30, '1968-10-21', 'Stadium A', 16, 'Final'
+ 	52, 27, '1968-10-13', 'Stadium A', 24, 'Heat'
+ 	51, 27, '1968-10-26', 'Stadium A', 24, 'Final'
+ 	63, 21, '1968-10-13', 'Stadium B', 16, 'Heat'
+ 	62, 21, '1968-10-16', 'Stadium B', 16, 'Heat'
+ 	64, 21, '1968-10-20', 'Stadium B', 16, 'Final'
+ 	48, 19, '1968-10-12', 'Stadium A', 27, 'Heat'
+ 	47, 19, '1968-10-15', 'Stadium A', 27, 'Heat'
+ 	49, 19, '1968-10-24', 'Stadium A', 27, 'Final'
+ 	38, 6, '1968-10-16', 'Stadium B', 33, 'Heat'
+ 	39, 6, '1968-10-22', 'Stadium B', 33, 'Final'
+ 	67, 26, '1968-10-24', 'Stadium C', 14, 'Heat'
+ 	65, 26, '1968-10-25', 'Stadium C', 14, 'Heat'
+ 	66, 26, '1968-10-25', 'Stadium C', 14, 'Final' 
+}
+
+Athlete = { 
+	idAthlete:number, name:string, surname:string, gender:string, team:string 
+	296, 'Zambrose', 'Abdul Rahman', 'M', 'MAS'
+ 	313, 'Lawal', 'Kolawole "Kola" Abdulai', 'M', 'NGR'
+ 	368, 'Naoki', 'Abe', 'M', 'JPN'
+ 	605, 'Fernando', 'J. Abugattas Aboino', 'M', 'PER'
+ 	606, 'Roberto', 'Abugattas Aboino', 'M', 'PER'
+ 	649, 'Fernando', 'Acevedo Portugues', 'M', 'PER'
+ 	703, 'Marianne', '"Marjan" Ackermans-Thomas', 'F', 'NED'
+ 	841, 'Walter', 'Adams', 'M', 'FRG'
+ 	870, 'William', 'Arthur "Bill" Adcocks', 'M', 'GBR'
+ 	887, 'James', 'Aryee Addy', 'M', 'GHA'
+ 	926, 'Esau', 'Adenji', 'M', 'CMR'
+ 	1117, 'Gennady', 'Mikhaylovich Agapov', 'M', 'URS'
+ 	1326, 'Michael', 'Kofi "Mike" Ahey', 'M', 'GHA'
+ 	1482, 'Ingeborg', '"Inge" Aigner (-Weichert)', 'F', 'AUT'
+ 	1597, 'smail', 'Akay', 'M', 'TUR'
+ 	1680, 'Oyeronke', 'Akindele', 'F', 'NGR'
+ 	1747, 'Hseyin', 'Akta', 'M', 'TUR'
+ 	2255, 'Vyacheslav', 'Nikolayevich Alanov', 'M', 'URS'
+ 	2269, 'Altti', 'Matti Ensio Alarotu', 'M', 'FIN'
+ 	2438, 'James', 'Noel Carroll "Jim" Alder', 'M', 'GBR'
+ 	2560, 'Jaroslav', 'Alexa', 'M', 'TCH'
+ 	3075, 'Frederick', 'John "Fred" Alsop', 'M', 'GBR'
+ 	3162, 'Javier', 'lvarez Salgado', 'M', 'ESP'
+ 	3273, 'Domingo', 'Amaizn Mastroianni', 'M', 'ARG'
+ 	3380, 'Antonio', '"Antonino" Ambu', 'M', 'ITA'
+ 	3415, 'John', 'A. Ametepey', 'M', 'GHA'
+ 	3468, 'Ernst', 'Ammann', 'M', 'SUI'
+ 	3471, 'Sieglinde', 'Ammann (Pfannerstill-)', 'F', 'SUI'
+ 	3485, 'Johnson', 'O. Amoah', 'M', 'GHA'
+ 	3666, 'Martin', 'Ande', 'M', 'NGR'
+ 	3968, 'Stig', 'rjan Andersson', 'M', 'SWE'
+ 	4438, 'Alice', 'Annum', 'F', 'GHA'
+ 	4487, 'Mrta', 'Antal-Rudas', 'F', 'HUN'
+ 	4495, 'Meta', 'Antenen (-Mathys)', 'F', 'SUI'
+ 	4630, 'Charlemagne', 'Anyamah', 'M', 'FRA'
+ 	4997, 'Francesco', '"Franco" Arese', 'M', 'ITA'
+ 	5001, 'Luis', 'Felipe Areta Sampriz', 'M', 'ESP'
+ 	5034, 'Juan', 'Argello Sandoval', 'M', 'NCA'
+ 	5279, 'Hernando', 'Arrechea', 'M', 'COL'
+ 	5446, 'Yevhen', 'Oleksandrovych Arzhanov', 'M', 'URS'
+ 	5482, 'Charles', 'Asati', 'M', 'KEN'
+ 	5594, 'Victor', 'Asirvatham', 'M', 'MAS'
+ 	5697, 'Jos', 'Nicols Astacio', 'M', 'ESA'
+ 	5991, 'Rein', 'Aun', 'M', 'URS'
+ 	6123, 'Mykola', 'Viktorovych Avilov', 'M', 'URS'
+ 	6190, 'Labidi', 'Djaouadi Ayachi', 'M', 'TUN'
+ 	6523, 'Jack', 'Stangl "Jack" Bacheler', 'M', 'USA'
+ 	6662, 'Andrzej', 'Stanisaw Badeski', 'M', 'POL'
+ 	6724, 'Baeg', 'Ok-Ja', 'F', 'KOR'
+ 	6754, 'Carlos', 'Bez Guzman', 'M', 'PUR'
+ 	6759, 'Ezequiel', 'Baeza', 'M', 'CHI'
+ 	6878, 'Margaret', 'Ann Bailes (Johnson-)', 'F', 'USA'
+ 	6889, 'David', 'George "Dave" Bailey', 'M', 'CAN'
+ 	6942, 'RaNae', 'Jean Bair (-Seaman)', 'F', 'USA'
+ 	7117, 'Jan', 'Balachowski', 'M', 'POL'
+ 	7248, 'Anthony', 'Richard Balfour', 'M', 'BAH'
+ 	7254, 'Viktor', 'Balikhin', 'M', 'URS'
+ 	7366, 'Gyrgyi', 'Balogh-Szomov', 'F', 'HUN'
+ 	7430, 'Clicien', 'Alexandre Roger Bambuck', 'M', 'FRA'
+ 	7581, 'Monique', 'Bantgny (Parenty-)', 'F', 'FRA'
+ 	7583, 'Ralph', 'Banthorpe', 'M', 'GBR'
+ 	7637, 'Emilio', 'Barahona', 'M', 'HON'
+ 	7791, 'Otto', 'Eduardovich Barch', 'M', 'URS'
+ 	7906, 'Leonid', 'Barkovskiy', 'M', 'URS'
+ 	7943, 'Ghislaine', 'Brigitte Marie Barnay (-Bambuck)', 'F', 'FRA'
+ 	7994, 'Eric', 'Richard "Enrico" Barney', 'M', 'ARG'
+ 	8110, 'Timothy', 'Edward A. "Tim" Barrett', 'M', 'BAH'
+ 	8335, 'Maureen', 'Anne Barton-Chitty', 'F', 'GBR'
+ 	8455, 'Norma', 'Enriqueta Basilio Sotelo', 'F', 'MEX'
+ 	8460, 'Estelle', 'Jane Baskerville (-Diehl)', 'F', 'USA'
+ 	8703, 'Ingeborg', '"Inge" Bauer (Exner-)', 'F', 'GDR'
+ 	8761, 'Helmuth', 'Baumann', 'M', 'GDR'
+ 	9026, 'Robert', '"Bob" Beamon', 'M', 'USA'
+ 	9261, 'Flix', 'Bcquer Lastra', 'M', 'MEX'
+ 	9337, 'Arnjolt', 'Beer', 'M', 'FRA'
+ 	9343, 'Klaus', 'Beer', 'M', 'GDR'
+ 	9658, 'Charles', 'Wade Bell', 'M', 'USA'
+ 	9719, 'Sergio', 'Bello', 'M', 'ITA'
+ 	9998, 'Kurt', 'Bendlin', 'M', 'FRG'
+ 	10143, 'Maurice', 'Benn', 'M', 'GBR'
+ 	10172, 'Joyce', 'Elaine Bennett (-Sala Tenna)', 'F', 'AUS'
+ 	10334, 'Brigitte', 'Berendonk (-Franke)', 'F', 'FRG'
+ 	10394, 'Ove', 'Kjell Berg', 'M', 'SWE'
+ 	10798, 'Livio', 'Berruti', 'M', 'ITA'
+ 	10835, 'Berit', 'Berthelsen (Tien-)', 'F', 'NOR'
+ 	10878, 'Stephanie', 'Berto (-Berkun)', 'F', 'CAN'
+ 	10907, 'Gilles', 'Bertould', 'M', 'FRA'
+ 	10996, 'Colette', 'Besson (-Nogus)', 'F', 'FRA'
+ 	11145, 'Uwe', 'Beyer', 'M', 'FRG'
+ 	11156, 'Tegegne', 'Bezabeh', 'M', 'ETH'
+ 	11350, 'Franz', 'Biedermann', 'M', 'LIE'
+ 	11467, 'Abebe', 'Bikila', 'M', 'ETH'
+ 	11711, 'Heinfried', 'Ernst Birlenbach', 'M', 'FRG'
+ 	11712, 'Georgios', 'Birmbilis', 'M', 'GRE'
+ 	11864, 'Amos', 'Kipwabok Biwott', 'M', 'KEN'
+ 	12039, 'Yordanka', 'Blagoeva Ivanova', 'F', 'BUL'
+ 	12264, 'Hennadiy', 'Oleksiyovych Bleznitsov', 'M', 'URS'
+ 	12283, 'John', 'Alan Blinston', 'M', 'GBR'
+ 	12340, 'John-Erik', 'Blomqvist', 'M', 'SWE'
+ 	12417, 'Franklin', 'Blyden', 'M', 'ISV'
+ 	12442, 'Lillian', 'Barbara Board', 'F', 'GBR'
+ 	12648, 'Olajumoke', 'Bodunrin', 'F', 'NGR'
+ 	12769, 'Judit', 'Bognr (-Lendvay)', 'F', 'HUN'
+ 	13024, 'Viktor', 'Bolshov', 'M', 'URS'
+ 	13071, 'Naftali', 'Bon', 'M', 'KEN'
+ 	13113, 'Virginia', 'Bonci (-Ioan)', 'F', 'ROU'
+ 	13352, 'Derek', 'Charles Joseph Boosey', 'M', 'GBR'
+ 	13571, 'Manon', 'Bornholdt (-Eigenherr)', 'F', 'FRG'
+ 	13727, 'Reinhold', 'Boschert', 'M', 'FRG'
+ 	13797, 'Ralph', 'Harold Boston', 'M', 'USA'
+ 	14054, 'John', 'Peter Boulter', 'M', 'GBR'
+ 	14258, 'Dianne', 'Marie Bowering-Burge', 'F', 'AUS'
+ 	14294, 'Jacques', '"Jacky" Boxberger', 'M', 'FRA'
+ 	14302, 'Renate', 'Boy-Garisch-Culmberger', 'F', 'GDR'
+ 	14321, 'Peter', 'Boyce', 'M', 'AUS'
+ 	14323, 'Andrew', 'Harry "Andy" Boychuk', 'M', 'CAN'
+ 	14374, 'Raelene', 'Ann Boyle', 'F', 'AUS'
+ 	14888, 'Roland', 'Brehmer', 'M', 'POL'
+ 	15164, 'Arnaldo', 'Bristol Sabater', 'M', 'PUR'
+ 	15366, 'Wesley', '"Wes" Brooker', 'M', 'CAN'
+ 	15395, 'Victor', 'Brooks', 'M', 'JAM'
+ 	15413, 'Klaus-Ludwig', 'Brosius', 'M', 'FRG'
+ 	15508, 'Doris', 'Elaine Brown (Severtson-; -Heritage)', 'F', 'USA'
+ 	15575, 'Reynaldo', 'Ray Brown', 'M', 'USA'
+ 	15582, 'Sandra', 'Elizabeth Brown (-Webb)', 'F', 'AUS'
+ 	15669, 'Bjrn', 'Richard "Ricky" Bruch', 'M', 'SWE'
+ 	15884, 'David', 'Gareth Bryan-Jones', 'M', 'GBR'
+ 	16188, 'Valeria', 'Bufanu-tefnescu', 'F', 'ROU'
+ 	16221, 'Samuel', 'Zanya "Sam" Bugri', 'M', 'GHA'
+ 	16239, 'Rolf', 'Bhler', 'M', 'SUI'
+ 	16367, 'Michael', 'Anthony "Mike" Bull', 'M', 'GBR'
+ 	16555, 'Lennox', 'Garth Burgher', 'M', 'JAM'
+ 	16607, 'Edward', 'Andrew "Ed" Burke', 'M', 'USA'
+ 	16667, 'Karin', 'Burneleit (-Krebs)', 'F', 'GDR'
+ 	16683, 'Ezra', 'Ellsworth Burnham', 'M', 'BAR'
+ 	16795, 'Pasquale', 'Busca', 'M', 'ITA'
+ 	16805, 'Jrgen', 'Busch', 'M', 'GDR'
+ 	17324, 'Maureen', 'Caird (-Jones)', 'F', 'AUS'
+ 	17463, 'Sharon', 'Marie Callahan (-McKniff)', 'F', 'USA'
+ 	17503, 'Andrs', 'Roberto Calonge', 'M', 'ARG'
+ 	17537, 'Euclides', 'Calzado Lpez-Cardona', 'M', 'CUB'
+ 	17694, 'Colin', 'William Ashburner Campbell', 'M', 'GBR'
+ 	17784, 'Eladio', 'Campos Aleman', 'M', 'MEX'
+ 	17861, 'Nurullah', 'Candan', 'M', 'TUR'
+ 	18070, 'Felix', 'Cappella', 'M', 'CAN'
+ 	18112, 'Leonida', 'Caraiosifoglu', 'M', 'ROU'
+ 	18216, 'Jacques', 'Carette', 'M', 'FRA'
+ 	18290, 'John', 'Wesley Carlos', 'M', 'USA'
+ 	18300, 'Gary', 'David Carlsen', 'M', 'USA'
+ 	18383, 'Roberto', 'Carmona Botella', 'M', 'MEX'
+ 	18549, 'Casey', 'D. Carrigan', 'M', 'USA'
+ 	18588, 'Noel', 'J. Carroll', 'M', 'IRL'
+ 	18633, 'Christopher', 'Sydney "Chris" Carter', 'M', 'GBR'
+ 	18683, 'Edward', 'Julius "Ed" Caruthers; Jr.', 'M', 'USA'
+ 	18834, 'Lutz', 'Caspers', 'M', 'FRG'
+ 	18904, 'Roberto', 'Castellanos Braa', 'M', 'ESA'
+ 	19040, 'Olimpia', 'Cataram', 'F', 'ROU'
+ 	19180, 'Benedict', 'Hutchinson "Ben" Cayenne', 'M', 'TTO'
+ 	19271, 'Eva', 'Gunilla Cederstrm (-Warchalowski)', 'F', 'SWE'
+ 	19887, 'Michel', 'Charland', 'M', 'CAN'
+ 	19924, 'Vilma', 'Belle Charlton', 'F', 'JAM'
+ 	20142, 'Tekla', 'Chemabwai', 'F', 'KEN'
+ 	20178, 'Chen', 'Chuan-Show', 'M', 'TPE'
+ 	20243, 'Chen', 'Ming-Chi', 'M', 'TPE'
+ 	20539, 'Elizabeth', 'Chesire', 'F', 'KEN'
+ 	20609, 'Chi', '(-Reel) Cheng', 'F', 'TPE'
+ 	20715, 'Norman', 'Chihota', 'M', 'TAN'
+ 	20892, 'Nadezhda', 'Vladimirovna Chizhova', 'F', 'URS'
+ 	20912, 'Anna', 'Chmelkov (Blanrikov-)', 'F', 'TCH'
+ 	21123, 'Nyak', 'Voon Nasar-ud-Din "Anthony" Chong', 'M', 'MAS'
+ 	21628, 'erban', 'Ciochin', 'M', 'ROU'
+ 	21657, 'Maria', 'de Conceio Cipriano', 'F', 'BRA'
+ 	21799, 'Frank', 'Allan Clark', 'M', 'AUS'
+ 	21881, 'Ronald', 'William "Ron" Clarke', 'M', 'AUS'
+ 	21958, 'Derek', 'J. Clayton', 'M', 'AUS'
+ 	21964, 'Wellesley', 'Kenneth Clayton', 'M', 'JAM'
+ 	22139, 'Miguelina', 'Cobin Hechavarra', 'F', 'CUB'
+ 	22146, 'Jean', 'Cochard', 'M', 'FRA'
+ 	22351, 'Leonard', '"Leon" Coleman', 'M', 'USA'
+ 	22382, 'Pablo', 'Coln Martnez', 'M', 'MEX'
+ 	22493, 'Pierre', 'Colnard', 'M', 'FRA'
+ 	22579, 'Ren', 'Christian Combes', 'M', 'FRA'
+ 	22698, 'Harold', 'Vincent "Hal" Connolly', 'M', 'USA'
+ 	22941, 'John', 'Hugh Cooper', 'M', 'GBR'
+ 	23037, 'Efran', 'Cordero', 'M', 'ESA'
+ 	23049, 'Luis', 'Arturo Crdoba', 'M', 'HON'
+ 	23084, 'Giovanni', 'Cornacchia', 'M', 'ITA'
+ 	23151, 'Cristbal', 'Corrales', 'M', 'HON'
+ 	23543, 'Anne', 'Covell', 'F', 'CAN'
+ 	23546, 'Frank', 'George Covelli', 'M', 'USA'
+ 	23725, 'Allen', 'David Crawley', 'M', 'AUS'
+ 	23920, 'David', '"Dave" Cropper', 'M', 'GBR'
+ 	23924, 'Giacomo', 'Crosa', 'M', 'ITA'
+ 	24055, 'Ricardo', 'Alberto Cruz Flores', 'M', 'ESA'
+ 	24069, 'Magdolna', 'Csbi-Komka (-Zsivtzky)', 'F', 'HUN'
+ 	24160, 'Alfredo', 'Ernesto Cubas Borges', 'M', 'ESA'
+ 	24194, 'Guillermo', 'Cuello', 'M', 'ARG'
+ 	24357, 'Carlos', 'Octavio Cuque Lpez', 'M', 'GUA'
+ 	24498, 'Jan', 'Cych', 'M', 'POL'
+ 	24562, 'Zoltn', 'Cziffra', 'M', 'HUN'
+ 	24871, 'Judith', '"Jay" Dahlgren', 'F', 'CAN'
+ 	24919, 'Saoud', 'Obaid Daifallah', 'M', 'KUW'
+ 	25157, 'Ludvk', 'Dank', 'M', 'TCH'
+ 	25226, 'Billie', 'Jo Patricia "Pat" Daniels-Winslow (-Bank; -Connolly)', 'F', 'USA'
+ 	25456, 'Dashzevgiin', 'Namjilmaa', 'F', 'MGL'
+ 	25546, 'Wilbur', 'D. "Willie" Davenport', 'M', 'USA'
+ 	25623, 'Howard', 'Granville Davies', 'M', 'GBR'
+ 	25635, 'Lynn', 'Davies', 'M', 'GBR'
+ 	25787, 'Harry', 'Ronald "Ron" Daws', 'M', 'USA'
+ 	25806, 'Robert', 'Winston "Bob" Day', 'M', 'USA'
+ 	25837, 'Herv', 'd`Encausse', 'M', 'FRA'
+ 	26314, 'Josephine', 'H. de la Via', 'F', 'PHI'
+ 	26496, 'Eduard', 'Jan "Ed" de Noorlander', 'M', 'NED'
+ 	26514, 'Manuel', 'Figueiredo de Oliveira', 'M', 'POR'
+ 	26526, 'Gioacchino', 'De Palma', 'M', 'ITA'
+ 	27029, 'Fikru', 'Deguefu', 'M', 'ETH'
+ 	27031, 'Andr', 'Dehertoghe', 'M', 'BEL'
+ 	27098, 'Giovanni', '"Gianni" Del Buono', 'M', 'ITA'
+ 	27232, 'Jocelyn', 'Delecour', 'M', 'FRA'
+ 	27240, 'Henri', 'Delerue', 'M', 'FRA'
+ 	27348, 'Ihor', 'Della-Rossa', 'M', 'URS'
+ 	27600, 'Nicole', 'Denise (-Perez)', 'F', 'FRA'
+ 	28008, 'Alfredo', 'Juan Deza Fuller', 'M', 'PER'
+ 	28121, 'Mansour', 'Mamadou Dia', 'M', 'SEN'
+ 	28291, 'Rodobaldo', 'Daz Arrambarry', 'M', 'CUB'
+ 	28455, 'Walter', 'Diel', 'M', 'AUT'
+ 	28456, 'Bernd', 'Diener', 'M', 'GDR'
+ 	28765, 'Yoyaga', 'Dit Fatogoma Dit Coulibaly', 'M', 'CIV'
+ 	29094, 'Musa', 'Dogon Yaro', 'M', 'NGR'
+ 	29221, 'Bohdan', '"Don" Domansky', 'M', 'CAN'
+ 	29446, 'Thomas', 'Robert "Tom" Dooley', 'M', 'USA'
+ 	29566, 'Ada', 'Menezes dos Santos', 'F', 'BRA'
+ 	29611, 'Csaba', 'Dosa', 'M', 'ROU'
+ 	29655, 'Ralph', 'Douglas Doubell', 'M', 'AUS'
+ 	29916, 'William', 'Santino Dralu', 'M', 'UGA'
+ 	29946, 'Jerome', 'Drayton', 'M', 'CAN'
+ 	30039, 'Lois', 'Anne Drinkwater (-Thompson)', 'F', 'USA'
+ 	30393, 'Nikolay', 'Afanasyevich Dudkin', 'M', 'URS'
+ 	30402, 'Marian', 'Andrzej Dudziak', 'M', 'POL'
+ 	30461, 'Jean-Pierre', 'Dufresne', 'M', 'FRA'
+ 	30767, 'Maryvonne', 'Dupureur (Samson-)', 'F', 'FRA'
+ 	30829, 'Marcel', 'Duriez', 'M', 'FRA'
+ 	30920, 'Werner', 'Duttweiler', 'M', 'SUI'
+ 	31040, 'Byron', 'Alphonso Dyce', 'M', 'JAM'
+ 	31051, 'Julia', 'Marie "Judy" Dyer', 'F', 'USA'
+ 	31085, 'Juan', 'Carlos Pablo Dyrzka', 'M', 'ARG'
+ 	31125, 'Spas', 'Dzhurov', 'M', 'BUL'
+ 	31344, 'Sndor', 'Eckschmiedt', 'M', 'HUN'
+ 	31588, 'Harald', 'Eggers', 'M', 'GDR'
+ 	31630, 'Anthony', 'Egwunyenga', 'M', 'NGR'
+ 	31719, 'Joachim', '"Jochen" Eigenherr', 'M', 'FRG'
+ 	31795, 'David', 'Ejoke', 'M', 'NGR'
+ 	32085, 'Hassan', 'El-Mech', 'M', 'MAR'
+ 	32232, 'Marlene', 'Elejarde Daz', 'F', 'CUB'
+ 	32244, 'Bryan', 'Eley', 'M', 'GBR'
+ 	32338, 'Henry', 'Junior Elliott', 'M', 'FRA'
+ 	32362, 'David', 'John "Dave" Ellis', 'M', 'CAN'
+ 	32522, 'Roswitha', 'Emonts-Gast (-Casin)', 'F', 'BEL'
+ 	32619, 'Heinfried', 'Engel', 'M', 'FRG'
+ 	32799, 'Rodolfo', 'Erazo Santos', 'M', 'HON'
+ 	32814, 'Heinz', 'Erbster', 'M', 'GDR'
+ 	32919, 'Laine', 'Erik (-Kallas)', 'F', 'URS'
+ 	33301, 'Horacio', 'E. Esteves Orihuela', 'M', 'VEN'
+ 	33349, 'Albertino', 'Etchechury', 'M', 'URU'
+ 	33457, 'Lee', 'Edward Evans', 'M', 'USA'
+ 	33525, 'Valentyna', 'Evert (-Borysevych)', 'F', 'URS'
+ 	33773, 'Johann', '"Hans" Fahsl', 'M', 'FRG'
+ 	33810, 'Mria', 'Faithov-Mranov', 'F', 'TCH'
+ 	34006, 'Jnos', 'Farag', 'M', 'HUN'
+ 	34030, 'Nedeljko', '"Nedo" Fari', 'M', 'YUG'
+ 	34151, 'Thomas', 'Francis "Tom" Farrell', 'M', 'USA'
+ 	34162, 'John', 'Allan Farrington', 'M', 'AUS'
+ 	34638, 'Grard', 'Fenouil', 'M', 'FRA'
+ 	35011, 'Barbara', 'Ann Ferrell (-Edmonson)', 'F', 'USA'
+ 	35268, 'Enrique', 'Figuerola Camu', 'M', 'CUB'
+ 	35279, 'Olga', 'Fikotov-Connolly', 'F', 'USA'
+ 	35404, 'Renzo', 'Finelli', 'M', 'ITA'
+ 	35417, 'Robert', '"Bob" Finlay', 'M', 'CAN'
+ 	35581, 'Joan', 'Fisher', 'F', 'CAN'
+ 	35906, 'Galdino', 'Flores Valles', 'M', 'MEX'
+ 	35991, 'ura', 'Foi', 'F', 'YUG'
+ 	36202, 'Clifton', 'Forbes', 'M', 'JAM'
+ 	36332, 'Bo', 'Erik rjan Forssander', 'M', 'SWE'
+ 	36401, 'Richard', 'Douglas "Dick" Fosbury', 'M', 'USA'
+ 	36635, 'Juan', 'Franceschi', 'M', 'PUR'
+ 	36898, 'Michael', '"Mike" Fray', 'M', 'JAM'
+ 	36996, 'Ronald', 'John "Ron" Freeman; III', 'M', 'USA'
+ 	37083, 'Peter', 'Frenkel', 'M', 'GDR'
+ 	37153, 'Xaver', 'Frick; Jr.', 'M', 'LIE'
+ 	37183, 'Edgar', 'Friedli', 'M', 'SUI'
+ 	37189, 'Barbara', 'Ann Friedrich (-Parcinski)', 'F', 'USA'
+ 	37235, 'Roberto', 'Frinolli Puzzilli', 'M', 'ITA'
+ 	37323, 'Dieter', 'Fromm', 'M', 'GDR'
+ 	37418, 'Marlene', 'Fuchs (Klein-)', 'F', 'FRG'
+ 	37960, 'Leszek', '"Lech" Gajdziski', 'M', 'POL'
+ 	37968, 'Amadou', 'Gakou', 'M', 'SEN'
+ 	38252, 'Mohamad', 'Tlili ben Abdallah Gammoudi', 'M', 'TUN'
+ 	38476, 'Marcia', 'Alejandra Garbey Momtell', 'F', 'CUB'
+ 	38608, 'Jos', 'Garca Gaspar', 'M', 'MEX'
+ 	38619, 'Juan', 'Manuel Garca Dumois', 'M', 'CUB'
+ 	38737, 'Sven', 'Anders Grderud', 'M', 'SWE'
+ 	38744, 'Robert', 'Charles "Bob" Gardiner', 'M', 'AUS'
+ 	38874, 'Pablo', 'Garrido Lugo', 'M', 'MEX'
+ 	38877, 'Luis', 'Mara Garriga Ortz', 'M', 'ESP'
+ 	39163, 'Valentin', 'Aleksandrovich Gavrilov', 'M', 'URS'
+ 	39329, 'Wilfried', 'Geeroms', 'M', 'BEL'
+ 	39508, 'Giuseppe', 'Gentile', 'M', 'ITA'
+ 	39860, 'Morgan', 'Gesmalla', 'M', 'SUD'
+ 	40034, 'Omar', 'Ghizlat', 'M', 'MAR'
+ 	40558, 'Werner', 'Girke', 'M', 'FRG'
+ 	40570, 'Esperanza', 'Emma Girn Olivares', 'F', 'MEX'
+ 	40792, 'Traugott', 'Glckler', 'M', 'FRG'
+ 	41195, 'Lyudmila', 'Golomazova (Gaponova-)', 'F', 'URS'
+ 	41360, 'Maria', 'Francisca Philomena "Mia" Gommers (-Hoogakkers)', 'F', 'NED'
+ 	41481, 'Armando', 'J. Gonzlez Iguini', 'M', 'URU'
+ 	41546, 'Jorge', 'Gonzlez Amo', 'M', 'ESP'
+ 	41616, 'Miguel', 'Angel Gonzlez', 'M', 'MEX'
+ 	41808, 'Juan', 'Santiago Gordn', 'M', 'CHI'
+ 	42122, 'Donata', 'Govoni (-Sandrini)', 'F', 'ITA'
+ 	42160, 'Uwe', 'Grabe', 'M', 'GDR'
+ 	42317, 'Pedro', 'Antonio Grajales Escobar', 'M', 'COL'
+ 	42637, 'Josephine', 'Mary Green (-Tagg)', 'F', 'GBR'
+ 	42662, 'Charles', 'Edward "Charlie" Greene', 'M', 'USA'
+ 	42928, 'Sergey', 'Grigoryev', 'M', 'URS'
+ 	43191, 'Jorge', 'Grosser Castillo', 'M', 'CHI'
+ 	43349, 'Vera', 'Grushkina (-Gavrilova)', 'F', 'URS'
+ 	43503, 'Guram', 'Gudashvili', 'M', 'URS'
+ 	43861, 'Rajalingam', 'Gunaratnam', 'M', 'MAS'
+ 	44045, 'Ilona', 'Maria Gusenbauer (Majdan-)', 'F', 'AUT'
+ 	44060, 'Eduard', 'Viktorovich Gushchin', 'M', 'URS'
+ 	44167, 'Gustavo', 'Gutirrez', 'M', 'ECU'
+ 	44320, 'Josef', 'Gwerder', 'M', 'SUI'
+ 	44486, 'Jrgen', 'Haase', 'M', 'GDR'
+ 	44543, 'Matias', 'Habtemichael', 'M', 'ETH'
+ 	44606, 'Jaddor', 'Hamadi Ben Haddou', 'M', 'MAR'
+ 	44824, 'Eeva', 'Inkeri Haimi (-Hongisto)', 'F', 'FIN'
+ 	44991, 'Albert', 'William "Al" Hall', 'M', 'USA'
+ 	45004, 'Ervin', 'Henry "Erv" Hall', 'M', 'USA'
+ 	45145, 'Rudolph', 'John "Rudy" Haluza', 'M', 'USA'
+ 	45215, 'Catherine', 'Louise "Cathy" Hamblin', 'F', 'USA'
+ 	45785, 'Nina', 'Ella Damkier Hansen (-Fahne)', 'F', 'DEN'
+ 	45808, 'Tom', 'Birger Hansen', 'M', 'DEN'
+ 	46107, 'Mariano', 'Haro Cisneros', 'M', 'ESP'
+ 	46123, 'Anthony', '"Tony" Harper', 'M', 'BER'
+ 	46387, 'Carlos', 'Eduardo Hasbn Zablah', 'M', 'ESA'
+ 	47103, 'Lennart', 'Per-Olav Hedmark', 'M', 'SWE'
+ 	47215, 'William', '"Bill" Heikkila', 'M', 'CAN'
+ 	47480, 'Margitta', 'Helmbold-Gummel', 'F', 'GDR'
+ 	47515, 'David', 'Peter "Dave" Hemery', 'M', 'GBR'
+ 	47610, 'Joan', 'Hendry', 'F', 'CAN'
+ 	47661, 'Klaus-Peter', 'Hennig', 'M', 'FRG'
+ 	47664, 'Gerhard', 'Hennige', 'M', 'FRG'
+ 	47671, 'Helga', 'Henning (-Fricke)', 'F', 'FRG'
+ 	47681, 'Geertruida', 'Leonie "Truus" Hennipman-Cruiming', 'F', 'NED'
+ 	47902, 'Rolf', 'Herings', 'M', 'FRG'
+ 	47943, 'Gumundur', 'Kristjn Hermannsson', 'M', 'ISL'
+ 	48010, 'Fulgencio', 'Hernndez Car', 'M', 'GUA'
+ 	48026, 'Ismael', 'Hernndez Avila', 'M', 'MEX'
+ 	48173, 'Maurice', 'Herriott', 'M', 'GBR'
+ 	48215, 'Gert', 'Herunter', 'M', 'AUT'
+ 	48429, 'Jos', 'Jacinto Hidalgo', 'M', 'VEN'
+ 	48592, 'Ronald', 'J. "Ron" Hill', 'M', 'GBR'
+ 	48684, 'Hadley', 'Andrew Hinds', 'M', 'BAR'
+ 	48696, 'James', 'Ray "Jim" Hines', 'M', 'USA'
+ 	48890, 'Hla', 'Thein', 'M', 'MYA'
+ 	48940, 'Ho', 'Henh Phc', 'M', 'VIE'
+ 	49112, 'Abigail', 'Golda "Abby" Hoffman', 'F', 'CAN'
+ 	49132, 'Dieter', 'Hoffmann', 'M', 'GDR'
+ 	49220, 'James', 'Joseph "Jim" Hogan (Cregan-)', 'M', 'GBR'
+ 	49265, 'Christoph', 'Hhne', 'M', 'GDR'
+ 	49611, 'Volodymyr', 'Stepanovych Holubnychiy', 'M', 'URS'
+ 	49734, 'Hong', 'Son-Long', 'M', 'TPE'
+ 	49776, 'Rbert', 'Honti', 'M', 'HUN'
+ 	49806, 'Lars-Olof', 'Hk', 'M', 'SWE'
+ 	49869, 'Rolf', 'Hoppe', 'M', 'CHI'
+ 	50260, 'Philippe', 'Georges Albert Alexis Fernand  Housiaux', 'M', 'BEL'
+ 	50471, 'Sneana', 'Hrepevnik', 'F', 'YUG'
+ 	50680, 'Eduard', '"Edy" Hubacher', 'M', 'SUI'
+ 	50747, 'Rudolf', 'Hbner', 'M', 'TCH'
+ 	50752, 'Miloslava', 'Hbnerov-Rezkov', 'F', 'TCH'
+ 	50858, 'Robert', 'Peter "Bob" Hughes', 'M', 'GBR'
+ 	51237, 'Angelo', 'Koko Nimir Hussein', 'M', 'SUD'
+ 	51637, 'Mahamat', 'Idriss (Koundja Ouya-)', 'M', 'CHA'
+ 	51650, 'Liudmila', 'Ievleva', 'F', 'URS'
+ 	51713, 'Lyudmila', 'Ivanovna Ignatyeva-Samotyosova', 'F', 'URS'
+ 	51723, 'Samuel', 'Igun', 'M', 'NGR'
+ 	51747, 'Hideo', 'Iijima', 'M', 'JPN'
+ 	51879, 'Karin', 'Illgen', 'F', 'GDR'
+ 	52151, 'Stefan', 'Ulf Arne Ingvarsson', 'M', 'SWE'
+ 	52162, 'Barbara', 'Jean Inkpen (-Lawton)', 'F', 'GBR'
+ 	52431, 'Kjell', 'Gunnar Isaksson', 'M', 'SWE'
+ 	52485, 'Yoshihisa', 'Ishida', 'M', 'JPN'
+ 	52631, 'Ahmed', 'Issa', 'M', 'CHA'
+ 	52788, 'Dragn', 'Ivanov', 'M', 'HUN'
+ 	52828, 'Nikolay', 'Nikolayevich Ivanov', 'M', 'URS'
+ 	53124, 'John', 'McKenzie Jackson', 'M', 'GBR'
+ 	53338, 'Rita', 'Jahn-Wilden', 'F', 'FRG'
+ 	53493, 'George', 'Lawrence "Larry" James', 'M', 'USA'
+ 	53515, 'Della', 'Patricia James-Pascoe', 'F', 'GBR'
+ 	53598, 'Aurelio', 'Janet Torres', 'M', 'CUB'
+ 	53697, 'Eva', 'Janko (Egger-)', 'F', 'AUT'
+ 	54009, 'Jan', 'Jasklski', 'M', 'POL'
+ 	54068, 'Daniela', 'Jaworska (Tarkowska-)', 'F', 'POL'
+ 	54180, 'Manikavasagam', '"Mani" Jegathesan', 'M', 'MAS'
+ 	54192, 'Jaroslava', 'Jehlikov', 'F', 'TCH'
+ 	54241, 'Martin', 'Jellinghaus', 'M', 'FRG'
+ 	54652, 'Henry', 'Winston "Harry" Jerome', 'M', 'CAN'
+ 	54919, 'Benjamin', 'Wabura "Ben" Jipcho', 'M', 'KEN'
+ 	55293, 'Hinrich', 'John', 'M', 'FRG'
+ 	55414, 'Edwin', 'Luther Kevin Johnson', 'M', 'BAH'
+ 	55449, 'Roger', 'Vivian Johnson', 'M', 'NZL'
+ 	55527, 'Timothy', 'Frederick Kemball "Tim" Johnston', 'M', 'GBR'
+ 	55615, 'Arthur', 'John Jones', 'M', 'GBR'
+ 	55715, 'Patricia', 'Ann "Pat" Jones', 'F', 'GBR'
+ 	55726, 'Ronald', '"Ron" Jones', 'M', 'GBR'
+ 	56182, 'Mauricio', 'Jubis Zacaras', 'M', 'ESA'
+ 	56320, 'Tom', 'Jungwirth', 'M', 'TCH'
+ 	56850, 'Godwin', 'Kalimbwe', 'M', 'ZAM'
+ 	56947, 'Henrik', 'Kalocsai', 'M', 'HUN'
+ 	57011, 'Claver', 'Kamanya', 'M', 'TAN'
+ 	57633, 'Jan-Erik', 'Karlsson', 'M', 'SWE'
+ 	57858, 'Jalal', 'Ali "Joe" Kashmiri', 'M', 'IRI'
+ 	58066, 'Alicia', 'Adela Kaufmanas', 'F', 'ARG'
+ 	58429, 'Kipchoge', 'Hezekieh "Kip" Keino', 'M', 'KEN'
+ 	58457, 'Ilja', 'Keizer-Laman', 'F', 'NED'
+ 	58561, 'Barrie', 'Harrison Kelly', 'M', 'GBR'
+ 	58579, 'John', 'Kelly', 'M', 'IRL'
+ 	58653, 'Franz-Josef', 'Kemper', 'M', 'FRG'
+ 	59066, 'Mohamed', 'Souai Asswai Khalifa', 'M', 'LBA'
+ 	59314, 'Oleksiy', 'Khlopotnov', 'M', 'URS'
+ 	59459, 'Ivanka', 'Marinova Khristova (Todorova-)', 'F', 'BUL'
+ 	59700, 'Pamela', '"Pam" Kilborn-Ryan (-Nelson)', 'F', 'AUS'
+ 	59775, 'Kim', 'Bong-Nae', 'M', 'KOR'
+ 	60401, 'Kenji', 'Kimihara', 'M', 'JPN'
+ 	60449, 'Manfred', 'Kinder', 'M', 'FRG'
+ 	60544, 'Jorma', 'Vilho Paavali Kinnunen', 'M', 'FIN'
+ 	60620, 'Wilson', 'Arap Chuma Kiprugut', 'M', 'KEN'
+ 	60774, 'Joachim', 'Kirst', 'M', 'GDR'
+ 	60830, 'Etelka', 'Kispl (Skultti-)', 'F', 'HUN'
+ 	60833, 'Antal', 'Kiss', 'M', 'HUN'
+ 	60847, 'Gyrgy', 'Kiss', 'M', 'HUN'
+ 	60859, 'Mria', 'Kiss', 'F', 'HUN'
+ 	61020, 'Rudolf', 'Klaban', 'M', 'AUT'
+ 	61105, 'Joln', 'Kleiber-Kontsek', 'F', 'HUN'
+ 	61238, 'Romuald', 'Iosifovich Klim', 'M', 'URS'
+ 	61351, 'Goetz', 'Heinrich Klopfer', 'M', 'USA'
+ 	61513, 'Hansredi', 'Knill', 'M', 'SUI'
+ 	61536, 'Gary', 'James Knoke', 'M', 'AUS'
+ 	61934, 'Benjamin', 'Kipkurgat Arap Kogo', 'M', 'KEN'
+ 	62271, 'Amelie', 'Koloska (Isermeyer-)', 'F', 'FRG'
+ 	62308, 'Wadysaw', 'Komar', 'M', 'POL'
+ 	62401, 'Gennady', 'Dmitriyevich Kondrashov', 'M', 'URS'
+ 	62411, 'Gaoussou', 'Kon', 'M', 'CIV'
+ 	62896, 'Vera', 'Korsakova (-Semyonova)', 'F', 'URS'
+ 	63305, 'Ioannis', 'Kousoulas', 'M', 'GRE'
+ 	63423, 'Annamria', 'Kovcs-Tth', 'F', 'HUN'
+ 	63621, 'Valentyna', 'Vasylivna Kozyr (-Avilova)', 'F', 'URS'
+ 	63666, 'Denis', 'Sgui Kragb', 'M', 'CIV'
+ 	63690, 'Francea', 'Norma "Francie" Kraker (-Johnson; -Goodridge)', 'F', 'USA'
+ 	63897, 'Lucyna', 'Krawcewicz', 'F', 'POL'
+ 	64319, 'Arnd', 'Krger', 'M', 'FRG'
+ 	64661, 'Viktor', 'Volodymyrovych Kudynskiy', 'M', 'URS'
+ 	64684, 'Joachim', 'Kugler', 'M', 'FRG'
+ 	64805, 'Gergely', 'Kulcsr', 'M', 'HUN'
+ 	64896, 'Praveen', 'Kumar Sobti', 'M', 'IND'
+ 	64948, 'Kun', 'Min-Mu', 'M', 'TPE'
+ 	64955, 'Canagasabai', 'Kunalan', 'M', 'SGP'
+ 	64984, 'Helmut', 'Kunisch', 'M', 'SUI'
+ 	65014, 'Hansruedi', 'Kunz', 'M', 'SUI'
+ 	65293, 'Ronald', 'Craig "Ron" Kutschinski', 'M', 'USA'
+ 	65433, 'Arne', 'Magnus Kvalheim', 'M', 'NOR'
+ 	65780, 'Shaul', 'Paul Ladany', 'M', 'ISR'
+ 	65899, 'Lolita', 'R. Lagrosas', 'F', 'PHI'
+ 	66010, 'Ronald', 'Owen "Ron" Laird', 'M', 'USA'
+ 	66266, 'Jennifer', 'Frances Lamy (-Frank)', 'F', 'AUS'
+ 	66432, 'Marita', 'Lange', 'F', 'GDR'
+ 	66533, 'Jnis', 'Lanka', 'M', 'URS'
+ 	66718, 'Thomas', 'Constantine "Tom" Laris', 'M', 'USA'
+ 	66791, 'Gerd', 'Larsen', 'M', 'DEN'
+ 	67108, 'Kaisa', 'Maria Launela', 'F', 'FIN'
+ 	67440, 'Katya', 'Lazova (-Oracheva)', 'F', 'BUL'
+ 	68072, 'Lee', 'Myeong-Jeong', 'M', 'KOR'
+ 	68102, 'Lee', 'Sang-Hun', 'M', 'KOR'
+ 	68394, 'Klaus', 'Lehnertz', 'M', 'FRG'
+ 	68396, 'Eva', 'Lehock-Gleskov', 'F', 'TCH'
+ 	68662, 'Georgios', 'Lemonis', 'M', 'GRE'
+ 	68852, 'Tnu', 'Lepik', 'M', 'URS'
+ 	68937, 'Alan', 'Leslie Lerwill', 'M', 'GBR'
+ 	68996, 'Roger', 'Lespagnard', 'M', 'BEL'
+ 	69055, 'Manfred', 'Letzerich', 'M', 'FRG'
+ 	69092, 'Burkhard', 'Leuschke', 'M', 'GDR'
+ 	69228, 'Gregory', 'David "Greg" Lewis', 'M', 'AUS'
+ 	69632, 'Sergio', 'Liani', 'M', 'ITA'
+ 	69793, 'Viliame', 'Bale Liga', 'M', 'FIJ'
+ 	69809, 'Shaun', 'Lightman', 'M', 'GBR'
+ 	69967, 'Lin', 'Chun-Yu', 'F', 'TPE'
+ 	70081, 'Stig', 'Erik Lindberg', 'M', 'SWE'
+ 	70438, 'Martin', 'William "Marty" Liquori', 'M', 'USA'
+ 	70866, 'Jos', 'Gerardo L`Oficial Olivero', 'M', 'DOM'
+ 	71075, 'Barbara', '"Brbel" Lhnert (Geiler-)', 'F', 'GDR'
+ 	71222, 'Clive', 'Citreon Olaf Longe', 'M', 'GBR'
+ 	71588, 'Hartmut', 'Losch', 'M', 'GDR'
+ 	71719, 'Lzr', 'Lovsz', 'M', 'HUN'
+ 	71804, 'Patricia', 'Barbara "Pat" Lowe-Cropper', 'F', 'GBR'
+ 	71953, 'Marijana', 'Lubej', 'F', 'YUG'
+ 	72331, 'Bengt', 'Kenneth Lundmark', 'M', 'SWE'
+ 	72466, 'Jnis', 'Lsis', 'M', 'URS'
+ 	73051, 'Ross', 'MacKenzie', 'M', 'CAN'
+ 	73172, 'Rex', 'Montague Maddaford', 'M', 'NZL'
+ 	73372, 'Ramon', 'Magarios Duro', 'M', 'ESP'
+ 	73402, 'David', 'L. "Dave" Maggard', 'M', 'USA'
+ 	73447, 'Horst-Rdiger', 'Magnor', 'M', 'FRG'
+ 	73490, 'Evan', 'George Maguire', 'M', 'NZL'
+ 	73794, 'Mamman', 'Makama', 'M', 'NGR'
+ 	73872, 'Simbara', 'Dembele Maki', 'M', 'CIV'
+ 	74003, 'Vctor', 'Maldonado Flores', 'M', 'VEN'
+ 	74212, 'Jerzy', 'Piotr Maluki', 'M', 'POL'
+ 	74229, 'Aleksandr', 'Malyutin', 'M', 'URS'
+ 	74350, 'Horst', 'Mandl', 'M', 'AUT'
+ 	74452, 'Wiesaw', 'Jan Maniak', 'M', 'POL'
+ 	74525, 'Madeline', 'Manning-Jackson (-Mims)', 'F', 'USA'
+ 	74549, 'Lia', 'Manoliu (-Raica)', 'F', 'ROU'
+ 	74582, 'Haji', 'Soua`an Mraljeb Ayed Mansoor', 'M', 'KUW'
+ 	75172, 'Margit', 'Mark-Nemeshzi', 'F', 'HUN'
+ 	75701, 'Carlos', 'Felipe Martnez Diosa', 'M', 'CUB'
+ 	75764, 'Jos', 'Luis Martnez Vzquez', 'M', 'ESP'
+ 	75771, 'Juan', 'Maximo Martnez', 'M', 'MEX'
+ 	75835, 'Rosario', 'Martnez Blandin', 'F', 'ESA'
+ 	76126, 'Valentin', 'Mikhaylovich Maslakov', 'M', 'URS'
+ 	76189, 'Wohib', 'Masresha', 'M', 'ETH'
+ 	76202, 'Alifu', 'Albert Massaquoi', 'M', 'SLE'
+ 	76534, 'James', 'Randel "Randy" Matson', 'M', 'USA'
+ 	76942, 'Philip', 'John "Phil" May', 'M', 'AUS'
+ 	77060, 'Charles', 'Mays', 'M', 'USA'
+ 	77177, 'Gabriel', 'M`Boa', 'M', 'CAF'
+ 	77688, 'David', 'Closs "Dave" McKenzie', 'M', 'NZL'
+ 	77772, 'Robert', 'McLaren', 'M', 'CAN'
+ 	77846, 'Patrick', 'Joseph "Pat" McMahon', 'M', 'IRL'
+ 	77912, 'Pablo', 'S. McNeil', 'M', 'JAM'
+ 	78022, 'Lajos', 'Mecser', 'M', 'HUN'
+ 	78041, 'Modesto', 'Mederos Lpez', 'M', 'CUB'
+ 	78248, 'Owen', 'Leopoldo Meighan', 'M', 'BIZ'
+ 	78324, 'lvaro', 'Meja Florez', 'M', 'COL'
+ 	78659, 'Rolando', 'Mendoza', 'M', 'NCA'
+ 	78696, 'Hans', 'Menet', 'M', 'SUI'
+ 	78753, 'Francisco', 'Mauricio Menocal', 'M', 'NCA'
+ 	78809, 'Gabrou', 'Merawi', 'M', 'ETH'
+ 	78976, 'Karl-Heinz', 'Merschenz', 'M', 'CAN'
+ 	79131, 'Gert', 'Metz', 'M', 'FRG'
+ 	79208, 'Gabrielle', 'Meyer (-Morre)', 'F', 'FRA'
+ 	79231, 'Renate', 'Meyer (Rose-)', 'F', 'FRG'
+ 	79462, 'Ingrid', 'Mickler-Becker (-Inglau)', 'F', 'FRG'
+ 	79780, 'Lothar', 'Milde', 'M', 'GDR'
+ 	79787, 'Leopold', '"Polde" Milek', 'M', 'YUG'
+ 	79886, 'Deborah', '"Debbie" Miller', 'F', 'CAN'
+ 	79915, 'Lennox', 'Valencia Miller', 'M', 'JAM'
+ 	79916, 'Leslie', 'Osborne Miller', 'M', 'BAH'
+ 	79979, 'Leslie', 'Roy "Les" Mills', 'M', 'NZL'
+ 	80253, 'Pedro', 'Miranda Noguez', 'M', 'MEX'
+ 	80538, 'Nobuyoshi', 'Miura (Matsuda-)', 'M', 'JPN'
+ 	81087, 'Heinz-Gerd', 'Mlders', 'M', 'FRG'
+ 	81152, 'Rosa', 'Molina Arias', 'F', 'CHI'
+ 	81224, 'Michael', '"Mick" Molloy', 'M', 'IRL'
+ 	81414, 'Ronald', 'S. "Ron" Monsegue', 'M', 'TTO'
+ 	81416, 'Eduard', 'George "Eddy" Monsels', 'M', 'SUR'
+ 	81451, 'Nicole', 'Montandon (-Pani)', 'F', 'FRA'
+ 	81524, 'Pablo', 'Montes Casanova', 'M', 'CUB'
+ 	81539, 'Eleanor', 'Inez Montgomery', 'F', 'USA'
+ 	81664, 'Kenneth', 'Clark "Kenny" Moore', 'M', 'USA'
+ 	81728, 'Radhams', 'F. Mora', 'M', 'DOM'
+ 	81770, 'Clovis', 'Morales', 'M', 'HON'
+ 	81778, 'Gustavo', 'Morales', 'M', 'NCA'
+ 	81789, 'Juan', 'Morales Hechavarra', 'M', 'CUB'
+ 	81955, 'Ivn', 'Moreno Lpez', 'M', 'CHI'
+ 	82214, 'Aleksandr', 'Morozov', 'M', 'URS'
+ 	82279, 'Una', 'Lorraine Morris (-Chong)', 'F', 'JAM'
+ 	82384, 'Paul', 'Mose', 'M', 'KEN'
+ 	82385, 'Carol', 'Jean L. Moseke (-Frost)', 'F', 'USA'
+ 	82836, 'Ishtiaq', 'Ahmad. Mubarak Ahmad', 'M', 'MAS'
+ 	82872, 'Enoch', 'Muemba', 'M', 'ZAM'
+ 	83080, 'Helmar', 'Mller', 'M', 'FRG'
+ 	83096, 'Julius', 'Mller', 'M', 'FRG'
+ 	83163, 'Wolfgang', 'Mller', 'M', 'GDR'
+ 	83302, 'Antnia', 'Munkcsi', 'F', 'HUN'
+ 	83422, 'Yukito', 'Muraki', 'M', 'JPN'
+ 	83455, 'Lyudmila', 'Muravyova', 'F', 'URS'
+ 	83520, 'Francis', '"Frank" Murphy', 'M', 'IRL'
+ 	83607, 'Marcus', 'Paul "Mark" Murro', 'M', 'USA'
+ 	83633, 'Mustafa', 'Musa', 'M', 'UGA'
+ 	83718, 'Erkki', 'Juhani Mustakari', 'M', 'FIN'
+ 	83892, 'Leonid', 'Oleksiyovych Mykytenko', 'M', 'URS'
+ 	83951, 'Neville', 'F. Myton', 'M', 'JAM'
+ 	84019, 'Lubomr', 'Ndenek', 'M', 'TCH'
+ 	84062, 'Jun', 'Nagai', 'M', 'JPN'
+ 	84421, 'Jean-Claude', 'Nallet', 'M', 'FRA'
+ 	84895, 'Papa', 'M`Baye N`Diaye', 'M', 'SEN'
+ 	85117, 'Doris', 'Anita Neil', 'F', 'GBR'
+ 	85215, 'Van', 'Arthur Nelson', 'M', 'USA'
+ 	85264, 'Mikls', 'Nmeth', 'M', 'HUN'
+ 	85275, 'Angla', 'Nmeth-Rnky', 'F', 'HUN'
+ 	85332, 'Jos', 'Socorro Neri Valenzuela', 'M', 'MEX'
+ 	85341, 'Bernhard', 'Nermerich', 'M', 'FRG'
+ 	85426, 'Hein-Direck', 'Neu', 'M', 'FRG'
+ 	85472, 'Klaus', 'Neumann', 'M', 'GDR'
+ 	85513, 'Pauli', 'Lauri Nevala', 'M', 'FIN'
+ 	85779, 'Namakoro', 'Koto te Niar', 'M', 'MLI'
+ 	85877, 'Claude', 'Nicolas', 'M', 'FRA'
+ 	85883, 'Christian', 'Nicolau', 'M', 'FRA'
+ 	86150, 'Conrad', 'Keith Nightingale', 'M', 'USA'
+ 	86161, 'Vincent', 'Paul Nihill', 'M', 'GBR'
+ 	86195, 'Wadysaw', 'Nikiciuk', 'M', 'POL'
+ 	86247, 'Pantelis', 'Nikolaidis', 'M', 'GRE'
+ 	86273, 'Vera', 'Nikoli (-asi)', 'F', 'YUG'
+ 	86363, 'Karl', 'ke Nilsson', 'M', 'SWE'
+ 	86576, 'Kiyoshi', 'Niwa', 'M', 'JPN'
+ 	86767, 'Monique', 'Noirot (Wideman-)', 'F', 'FRA'
+ 	86915, 'Wolfgang', 'Nordwig', 'M', 'GDR'
+ 	86955, 'Peter', 'George Norman', 'M', 'AUS'
+ 	86970, 'Harald', 'Norpoth', 'M', 'FRG'
+ 	87073, 'Bernard', 'Jonathan "Bernie" Nottage', 'M', 'BAH'
+ 	87241, 'Zenon', 'Stanisaw Nowosz', 'M', 'POL'
+ 	87343, 'Miguel', 'Nez Lima', 'M', 'DOM'
+ 	87455, 'Hezekiah', 'Munyoro Nyamau', 'M', 'KEN'
+ 	87667, 'Kerry', 'Dennis O`Brien', 'M', 'AUS'
+ 	88018, 'Josef', 'Odloil', 'M', 'TCH'
+ 	88023, 'Violet', 'Obiamaka Odogwu', 'F', 'NGR'
+ 	88073, 'Alfred', 'Adolph "Al" Oerter; Jr.', 'M', 'USA'
+ 	88212, 'Shinji', 'Ogura', 'M', 'JPN'
+ 	88371, 'Robert', 'Ojo', 'M', 'NGR'
+ 	88485, 'Antonina', 'Nikolayevna Okorokova-Lazareva', 'F', 'URS'
+ 	88572, 'Jn', 'ordur lafsson', 'M', 'ISL'
+ 	88661, 'Annelise', 'Damm Olesen', 'F', 'DEN'
+ 	88772, 'Miguel', 'de los Santos Olivera Alvarez', 'M', 'CUB'
+ 	88778, 'Jos', 'Oliveros de la Torre', 'M', 'MEX'
+ 	88869, 'Georg', 'Bruno Meyer Olsen', 'M', 'DEN'
+ 	89085, 'Amos', 'Omolo', 'M', 'UGA'
+ 	89199, 'Rogelio', 'P. Onofre', 'M', 'PHI'
+ 	89590, 'Julio', 'Rodolfo Ortz Figueroa', 'M', 'GUA'
+ 	90012, 'Anita', 'Otto (Hentschel-)', 'F', 'GDR'
+ 	90028, 'Sergio', 'Eliseo Ottolina', 'M', 'ITA'
+ 	90034, 'Eddy', 'Jean Paul Ottoz (Dimichelis-)', 'M', 'ITA'
+ 	90099, 'Larbi', 'Oukada', 'M', 'MAR'
+ 	90101, 'Robert', 'Ouko', 'M', 'KEN'
+ 	90366, 'Mart', 'Paama', 'M', 'URS'
+ 	90563, 'Joan', 'Florence Page-Allison', 'F', 'GBR'
+ 	90707, 'Teodoro', 'F. Palacios Flores', 'M', 'GUA'
+ 	90922, 'Abdon', 'Pamich', 'M', 'ITA'
+ 	91027, 'Carla', 'Panerai', 'F', 'ITA'
+ 	91056, 'Jacques', '"Jack" Pani', 'M', 'FRA'
+ 	91239, 'Khristos', 'Papanikolaou', 'M', 'GRE'
+ 	91673, 'John', 'Michael "Mike" Parker', 'M', 'GBR'
+ 	91696, 'Sheila', 'Hilary Parkin-Sherwood', 'F', 'GBR'
+ 	91875, 'Alan', 'Peter Pascoe', 'M', 'GBR'
+ 	92409, 'Andrew', 'Howard Payne', 'M', 'GBR'
+ 	92410, 'Jeffrey', '"Jeff" Payne', 'M', 'BER'
+ 	92528, 'Valerie', 'J. "Val" Peat (-Wild)', 'F', 'GBR'
+ 	92563, 'Nataliya', 'Aleksandrovna Pechonkina-Chistyakova (Burda-)', 'F', 'URS'
+ 	92578, 'Lawrence', 'William "Lawrie" Peckham', 'M', 'AUS'
+ 	92691, 'Jos', 'Pedraza Ziga', 'M', 'MEX'
+ 	92768, 'Maurice', 'Peiren', 'M', 'BEL'
+ 	92799, 'Walter', 'Pektor', 'M', 'AUT'
+ 	92970, 'Alfredo', 'Pealoza Carmona', 'M', 'MEX'
+ 	92988, 'Melvin', '"Mel" Pender; Jr.', 'M', 'USA'
+ 	92995, 'Mihaela', 'Pene (-Brandsdorfer)', 'F', 'ROU'
+ 	93044, 'John', 'Thomas Pennell', 'M', 'USA'
+ 	93050, 'Jacques', 'Pennewaert', 'M', 'BEL'
+ 	93069, 'Aurelia', 'Catalina Pentn Conde', 'F', 'CUB'
+ 	93235, 'Rupasinghe', 'A. Wimalasena Perera', 'M', 'SRI'
+ 	93288, 'Carlos', 'Prez Alonso', 'M', 'ESP'
+ 	93391, 'Juan', 'Rafael Angel Prez Cordoba', 'M', 'CRC'
+ 	93629, 'Bengt', 'Asbjrn Persson (-Widmark)', 'M', 'SWE'
+ 	93833, 'Mary', 'Elizabeth Peters', 'F', 'GBR'
+ 	94308, 'Ingo', 'Peyker', 'M', 'AUT'
+ 	94363, 'Ren', 'Pfister', 'M', 'SUI'
+ 	94430, 'Lutz', 'Philipp', 'M', 'FRG'
+ 	94564, 'Edmund', 'Pitkowski', 'M', 'POL'
+ 	94794, 'Paola', 'Pigni (-Cacchi)', 'F', 'ITA'
+ 	94923, 'Melesio', 'Pia Oregel', 'M', 'MEX'
+ 	95087, 'Irene', 'Maria Piotrowski (Macijauskas-)', 'F', 'CAN'
+ 	95324, 'Jozef', 'Plach', 'M', 'TCH'
+ 	95344, 'Manuel', 'Planchart', 'M', 'VEN'
+ 	95383, 'Carl', 'Plaskett', 'M', 'ISV'
+ 	95407, 'Susan', 'Mary "Sue" Platt', 'F', 'GBR'
+ 	95727, 'Robert', 'Ren Poirier', 'M', 'FRA'
+ 	95894, 'Willy', 'Polleunis', 'M', 'BEL'
+ 	96151, 'Cornelia', 'Popescu-Popa', 'F', 'ROU'
+ 	96160, 'Vira', 'Ivanivna Popkova (Kabreniuk-)', 'F', 'URS'
+ 	96192, 'Antonina', 'Nikolayevna Popova (Zolotukhina-)', 'F', 'URS'
+ 	96336, 'Michel', 'Portmann', 'M', 'SUI'
+ 	96514, 'Sylvia', 'Mildred Potts (Oxenham-)', 'F', 'NZL'
+ 	96582, 'Pertti', 'Juhani Pousi', 'M', 'FIN'
+ 	96802, 'Ennio', 'Preatoni', 'M', 'ITA'
+ 	97258, 'Harry', 'Prowell', 'M', 'GUY'
+ 	97270, 'Nlson', 'Prudncio', 'M', 'BRA'
+ 	97303, 'Patricia', 'Anne "Pat" Pryce-Nutting', 'F', 'GBR'
+ 	97379, 'Juris', '"George" Puce', 'M', 'CAN'
+ 	97661, 'Emiel', 'Adrien "Miel" Puttemans', 'M', 'BEL'
+ 	97835, 'William', 'A. Quaye', 'M', 'GHA'
+ 	97879, 'Violeta', 'Quesada Daz', 'F', 'CUB'
+ 	97882, 'Lawrence', 'Ronald "Larry" Questad', 'M', 'USA'
+ 	97883, 'Julio', 'Faustino Quevedo Elias', 'M', 'GUA'
+ 	98523, 'Dominique', 'Rakotorahalahy', 'M', 'MAD'
+ 	98538, 'Mamie', 'Annette Rallins', 'F', 'USA'
+ 	98597, 'Ramasamy', 'Subramaniam', 'M', 'MAS'
+ 	98650, 'Hermes', 'Julin Ramrez Limonta', 'M', 'CUB'
+ 	99212, 'Jean-Louis', 'Ravelomanantsoa', 'M', 'MAD'
+ 	99265, 'Oleg', 'Rayko', 'M', 'URS'
+ 	99524, 'Peter', 'Neville Reed', 'M', 'GBR'
+ 	99677, 'Karin', 'Reichert-Frisch', 'F', 'FRG'
+ 	99684, 'Audrey', 'Reid (-German)', 'F', 'JAM'
+ 	99739, 'William', 'L. "Bill" Reilly', 'M', 'USA'
+ 	99753, 'Hans-Georg', 'Reimann', 'M', 'GDR'
+ 	99760, 'Jens', 'Reimers', 'M', 'FRG'
+ 	99806, 'Heimo', 'Reinitzer', 'M', 'AUT'
+ 	100577, 'Karin', 'Richert-Balzer', 'F', 'GDR'
+ 	100626, 'Halina', 'Sylwia Richter-Grecka-Herrmann', 'F', 'FRG'
+ 	100711, 'Daniel', 'Riedo', 'M', 'SUI'
+ 	100765, 'Hubert', 'Riesner', 'M', 'FRG'
+ 	100909, 'Helna', 'Ringa', 'F', 'URS'
+ 	100974, 'Wilfredo', '"Willie" Ros', 'M', 'PUR'
+ 	100996, 'Arne', 'Roald Risa', 'M', 'NOR'
+ 	101010, 'Umberto', 'Risi', 'M', 'ITA'
+ 	101290, 'Edwin', 'Anthony Roberts', 'M', 'TTO'
+ 	101301, 'Jean', 'Evelyn Roberts', 'F', 'AUS'
+ 	101470, 'Thomas', 'Augustus "Tom" Robinson', 'M', 'BAH'
+ 	101492, 'Jean', 'Antoinette Robotham Gourzong', 'F', 'CRC'
+ 	101888, 'Gaston', 'Roelants', 'M', 'BEL'
+ 	102215, 'Mercedes', 'Romn Casillas', 'F', 'MEX'
+ 	102264, 'Edward', 'Romanowski', 'M', 'POL'
+ 	102266, 'David', 'L. "Dave" Romansky', 'M', 'USA'
+ 	102283, 'Fulgencia', 'Romay Martnez', 'F', 'CUB'
+ 	102599, 'Heidemarie', '"Heide" Rosendahl (-Ecker)', 'F', 'FRG'
+ 	103273, 'Daniel', 'Matasi Rudisha', 'M', 'KEN'
+ 	103347, 'Karin', 'Rger-Schulze', 'F', 'GDR'
+ 	103468, 'Pentti', 'Juhani Rummakko', 'M', 'FIN'
+ 	103565, 'Alan', 'Trevor Rushmer', 'M', 'GBR'
+ 	103713, 'Mieczysaw', 'Rutyna', 'M', 'POL'
+ 	103792, 'Michael', '"Mike" Ryan', 'M', 'NZL'
+ 	103917, 'James', 'Ronald "Jim" Ryun', 'M', 'USA'
+ 	103999, 'Patricio', 'Saavedra', 'M', 'CHI'
+ 	104286, 'Clment', 'Sagna', 'M', 'SEN'
+ 	104287, 'douard', 'Sagna', 'M', 'SEN'
+ 	104404, 'Robert', 'Sainte-Rose', 'M', 'FRA'
+ 	104412, 'Thomas', 'Saisi', 'M', 'KEN'
+ 	104430, 'Kazuo', 'Saito', 'M', 'JPN'
+ 	104842, 'Hermann', 'Salomon', 'M', 'FRG'
+ 	104905, 'Edgard', 'Salv', 'M', 'BEL'
+ 	105133, 'Cesare', 'Alejandro Snchez Ruz', 'M', 'MEX'
+ 	105193, 'Jos', 'Luis Snchez Paraso', 'M', 'ESP'
+ 	105429, 'Viktor', 'Saneyev', 'M', 'URS'
+ 	105434, 'Julius', 'Sang', 'M', 'KEN'
+ 	105650, 'Rafael', 'Antonio Santos Cisneros', 'M', 'ESA'
+ 	105690, 'Vladislav', 'Vladimirovich Sapeya', 'M', 'URS'
+ 	105826, 'Mirosawa', 'Kazimiera Sarna (Saaciska-)', 'F', 'POL'
+ 	105844, 'Laurent', 'Sarr', 'M', 'SEN'
+ 	105845, 'Mamadou', 'Sarr', 'M', 'SEN'
+ 	105891, 'Taketsugu', 'Saruwatari', 'M', 'JPN'
+ 	105917, 'Seiichiro', 'Sasaki', 'M', 'JPN'
+ 	106101, 'Michael', 'Sauer', 'M', 'FRG'
+ 	106329, 'Keisuke', 'Sawaki', 'M', 'JPN'
+ 	106544, 'Gertrud', 'Regina Schfer', 'F', 'FRG'
+ 	106642, 'Gnter', 'Schaumburg', 'M', 'GDR'
+ 	106703, 'Ingeborg', '"Inge" Schell (Karl-; -Pilz)', 'F', 'FRG'
+ 	106718, 'Hartmut', 'Schelter', 'M', 'GDR'
+ 	106731, 'Heinz-Gnter', 'Schenk', 'M', 'GDR'
+ 	106908, 'Claus', 'Schiprowski', 'M', 'FRG'
+ 	107155, 'Rita', 'Schmidt-Kirst', 'F', 'GDR'
+ 	107160, 'Karl-Peter', 'Schmidtke', 'M', 'FRG'
+ 	107308, 'Werner', 'Schneiter', 'M', 'SUI'
+ 	107349, 'Pierre', 'Schoebel', 'M', 'FRA'
+ 	107590, 'Wolf', 'Rainer Schubert', 'M', 'FRG'
+ 	108005, 'Jarvis', 'Lavonne Scott (-Jones)', 'F', 'USA'
+ 	108014, 'Louis', 'Cohn "Lou" Scott', 'M', 'USA'
+ 	108035, 'Susan', 'Diane "Sue" Scott-Reeve (-Herrington)', 'F', 'GBR'
+ 	108072, 'Robert', 'Lloyd "Bob" Seagren', 'M', 'USA'
+ 	108129, 'Mamo', 'Sebsibe', 'M', 'ETH'
+ 	108322, 'Maren', 'Elizabeth Seidler', 'F', 'USA'
+ 	108509, 'Wolfgang', 'Peter Selzer', 'M', 'GDR'
+ 	108656, 'Ahmed', 'Senoussi', 'M', 'CHA'
+ 	108896, 'Hctor', 'Serrate', 'M', 'PUR'
+ 	109173, 'Mukhamed', 'Sadyik Shakirov', 'M', 'URS'
+ 	109260, 'Rashid', 'Imamovich Sharafetdinov', 'M', 'URS'
+ 	109266, 'Ivaylo', 'Sharankov', 'M', 'BUL'
+ 	109424, 'Anatoly', 'Yefimovich Shchuplyakov', 'M', 'URS'
+ 	109634, 'John', 'Sherwood', 'M', 'GBR'
+ 	109666, 'Channa', 'Shezifi (-Zadik)', 'F', 'ISR'
+ 	109885, 'Dorothy', 'Ada Shirley (-Emerson)', 'F', 'GBR'
+ 	109996, 'Winston', 'Short', 'M', 'TTO'
+ 	110155, 'Gilles', 'Sibon', 'M', 'FRA'
+ 	110229, 'Janusz', 'Jan Sido', 'M', 'POL'
+ 	110277, 'Ingomar', 'Sieghart', 'M', 'FRG'
+ 	110310, 'Jimmy', 'Sierra', 'M', 'COL'
+ 	110318, 'Karl-Heinz', 'Sievers', 'M', 'FRG'
+ 	110423, 'Ileana', 'Silai (Gergely-)', 'F', 'ROU'
+ 	110551, 'Roberto', 'Silva Martnez', 'M', 'MEX'
+ 	110568, 'Benjamin', 'Silva-Netto', 'M', 'PHI'
+ 	110584, 'L.', 'Jay Silvester', 'M', 'USA'
+ 	110668, 'Nikola', 'Simeonov', 'M', 'BUL'
+ 	110772, 'George', 'Simon', 'M', 'TTO'
+ 	110799, 'Rudolf', '"Rudi" Simon', 'M', 'BEL'
+ 	110884, 'Janet', 'Mary Simpson (-Clerc)', 'F', 'GBR'
+ 	111023, 'Bhim', 'Singh', 'M', 'IND'
+ 	111255, 'Nashatar', 'Singh Sidhu', 'M', 'MAS'
+ 	111326, 'Yevgeny', 'Palladyevich Sinyayev', 'M', 'URS'
+ 	111735, 'V`iacheslav', 'Semenovych Skomorokhov', 'M', 'URS'
+ 	111850, 'Valeriy', 'Serhiyovych Skvortsov', 'M', 'URS'
+ 	111977, 'Richard', 'Donald "Rick" Sloan', 'M', 'USA'
+ 	112036, 'Mykola', 'Yakovych Smaha', 'M', 'URS'
+ 	112124, 'Steen', 'Lkkegaard Smidt-Jensen', 'M', 'DEN'
+ 	112208, 'Carmen', 'L. Smith (-Brown)', 'F', 'JAM'
+ 	112231, 'Oscar', 'David "Dave" Smith', 'M', 'USA'
+ 	112418, 'Tommie', 'C. Smith', 'M', 'USA'
+ 	112423, 'Tracy', 'Evans Smith', 'M', 'USA'
+ 	112535, 'Anthony', 'Howard "Tony" Sneazwell', 'M', 'AUS'
+ 	112751, 'Galina', 'Konstantinovna Sofina', 'F', 'URS'
+ 	112842, 'Ignacio', 'Sola Cortabarria', 'M', 'ESP'
+ 	112977, 'Irina', 'Solontsova-Kudryavtseva', 'F', 'URS'
+ 	113167, 'Kimaru', 'Songok', 'M', 'KEN'
+ 	113297, 'Cecilia', 'Nohem Sosa Vargas', 'F', 'ESA'
+ 	113521, 'Charel', 'Sowa', 'M', 'LUX'
+ 	113806, 'Gerhard', 'Sperling', 'M', 'GDR'
+ 	113831, 'Christine', '"Christa" Spielberg', 'F', 'GDR'
+ 	113835, 'Gunther', 'Spielvogel', 'M', 'FRG'
+ 	114225, 'Andrzej', 'Stalmach', 'M', 'POL'
+ 	114547, 'Edward', 'Jan Stawiarz', 'M', 'POL'
+ 	114559, 'Richard', 'Swift "Dick" Steane', 'M', 'GBR'
+ 	114717, 'Manfred', 'Steffny', 'M', 'FRG'
+ 	114921, 'Gary', 'Michael Stenlund', 'M', 'USA'
+ 	114949, 'Oleg', 'Stepanenko', 'M', 'URS'
+ 	114978, 'John', 'Stephen Akhwari', 'M', 'TAN'
+ 	114986, 'Lydia', 'Kittao Stephens (-Okech)', 'F', 'KEN'
+ 	115019, 'Mieke', 'Sterk (-van Wissen)', 'F', 'NED'
+ 	115188, 'Adrianus', 'Johannes "Aad" Steylen', 'M', 'NED'
+ 	115293, 'Jutta', 'Bettina Stck (-Hertel)', 'F', 'FRG'
+ 	115427, 'Manfred', 'Stolle', 'M', 'GDR'
+ 	115500, 'Stuart', 'Ellis Storey', 'M', 'GBR'
+ 	115596, 'Georgi', 'Ivanov Stoykovski', 'M', 'BUL'
+ 	115672, 'Erika', 'Strasser (-Wutscher)', 'F', 'AUT'
+ 	115675, 'Danuta', 'Julia Straszyska (-Kossek)', 'F', 'POL'
+ 	115862, 'Esther', 'Stroy (-Fair)', 'F', 'USA'
+ 	115936, 'Norris', 'Stubbs', 'M', 'BAH'
+ 	115980, 'Judit', 'Stugner (-Abahzi)', 'F', 'HUN'
+ 	116031, 'Erwin', 'Sttz', 'M', 'SUI'
+ 	116066, 'Su', 'Po-Tai', 'M', 'TPE'
+ 	116069, 'Su', 'Wen-Ho', 'M', 'TPE'
+ 	116206, 'Takeo', 'Sugawara', 'M', 'JPN'
+ 	116223, 'Kuniyoshi', 'Sugioka', 'M', 'JPN'
+ 	116296, 'Anatoly', 'Sukharkov', 'M', 'URS'
+ 	116308, 'Teresa', 'Sukniewicz (-Kleiber)', 'F', 'POL'
+ 	116724, 'Jzsef', 'St', 'M', 'HUN'
+ 	116837, 'Tsugumichi', 'Suzuki', 'M', 'JPN'
+ 	117003, 'Nikolay', 'Ivanovich Sviridov', 'M', 'URS'
+ 	117176, 'Barka', 'N. Sy', 'M', 'SEN'
+ 	117219, 'Liese', 'Sykora-Prokop', 'F', 'AUT'
+ 	117329, 'Jnos', 'Szab', 'M', 'HUN'
+ 	117506, 'Jnos', 'Szernyi', 'M', 'HUN'
+ 	117509, 'Irena', 'Szewiska-Kirszenstein', 'F', 'POL'
+ 	117552, 'Jzef', 'Szmidt (-Schmidt)', 'M', 'POL'
+ 	117589, 'Henryk', 'Jan Szordykowski', 'M', 'POL'
+ 	117775, 'Michael', 'John "Mike" Tagg', 'M', 'GBR'
+ 	117848, 'Robin', 'Douglas Tait', 'M', 'NZL'
+ 	118162, 'Tatyana', 'Andreyevna Talysheva (-Volkova; -Tregub)', 'F', 'URS'
+ 	118385, 'William', 'Raymond "Bill" Tancred', 'M', 'GBR'
+ 	118739, 'Norman', '"Norm" Tate', 'M', 'USA'
+ 	118874, 'Richard', 'George "Dick" Taylor', 'M', 'GBR'
+ 	118949, 'Sheila', 'Janet Taylor-Carey', 'F', 'GBR'
+ 	118985, 'Jeffrey', '"Jeff" Teale', 'M', 'GBR'
+ 	119029, 'Ferenc', 'Gbor Tgla', 'M', 'HUN'
+ 	119102, 'Eduardo', 'Antonio "Eddy" Tllez Valerino', 'M', 'CUB'
+ 	119108, 'Sylvie', '"Sylviane" Telliez (Marotel-)', 'F', 'FRA'
+ 	119147, 'Nabiba', 'Naftali Temu', 'M', 'KEN'
+ 	119229, 'Igor', 'Aramovich Ter-Ovanesyan', 'M', 'URS'
+ 	119442, 'Guy', 'Texereau', 'M', 'FRA'
+ 	119550, 'Reinhard', 'Theimer', 'M', 'GDR'
+ 	119707, 'Thin', 'Sumbwegam', 'M', 'MYA'
+ 	120170, 'Colin', 'Evandale Thurton', 'M', 'BIZ'
+ 	120187, 'Valbjrn', 'orlksson', 'M', 'ISL'
+ 	120261, 'Manfred', 'Tiedtke', 'M', 'GDR'
+ 	120267, 'Tien', 'Ah-Mei', 'F', 'TPE'
+ 	120311, 'Valentina', 'Nikolayevna Tikhomirova (-Lomakina)', 'F', 'URS'
+ 	120701, 'Miodrag', 'Todosijevi', 'M', 'YUG'
+ 	121078, 'William', 'Anthony "Bill" Toomey', 'M', 'USA'
+ 	121247, 'Alberto', 'Sebastian Torres de la Mota', 'M', 'DOM'
+ 	121395, 'Gyula', 'Tth', 'M', 'HUN'
+ 	121531, 'Fernand', 'Tovondray', 'M', 'MAD'
+ 	121673, 'Maureen', 'Dorothy Tranter (-Carter)', 'F', 'GBR'
+ 	121724, 'Urs', 'Trautmann', 'M', 'SUI'
+ 	121740, 'David', 'Howard "Dave" Travis', 'M', 'GBR'
+ 	121837, 'Norman', '"Norm" Trerise', 'M', 'CAN'
+ 	122162, 'Werner', 'Trzmiel', 'M', 'FRG'
+ 	122448, 'Lidiya', 'Tsymosh (-Yasynska)', 'F', 'URS'
+ 	122606, 'Bodo', 'Tmmler', 'M', 'FRG'
+ 	122611, 'Akn', 'Tuna', 'M', 'TUR'
+ 	122646, 'Aimo', 'Jaakko Uolevi Tuominen', 'M', 'FIN'
+ 	122675, 'Marconi', 'Turay', 'M', 'SLE'
+ 	123000, 'Wyomia', 'Tyus (-Simburg)', 'F', 'USA'
+ 	123162, 'Grard', 'Ugolini', 'M', 'FRA'
+ 	123178, 'Gerda', 'Uhlemann (Mittenzwei-)', 'F', 'GDR'
+ 	123251, 'Carlota', 'Ulloa', 'F', 'CHI'
+ 	123432, 'Nataa', 'Urbani (-Bezjak)', 'F', 'YUG'
+ 	123538, 'Akio', 'Usami', 'M', 'JPN'
+ 	123970, 'Jaroslava', 'Valentov (Kralov-; -ezov)', 'F', 'TCH'
+ 	124028, 'Juan', 'Ramon Valladares', 'M', 'HON'
+ 	124050, 'Jos', 'Esteban Valle', 'M', 'NCA'
+ 	124221, 'douard', '"Eddy" Van Butsele', 'M', 'BEL'
+ 	124377, 'Hermina', 'Johanna "Mirna" van der Hoeven-Jansen', 'F', 'NED'
+ 	124415, 'Mathilda', 'Catrina "Tilly" van der Made-van der Zwaard', 'F', 'NED'
+ 	124620, 'Wilhelmina', 'Catharina Maria Martina "Wilma" van Gool-van den Berg', 'F', 'NED'
+ 	124775, 'Gilbert', 'Van Manshoven', 'M', 'BEL'
+ 	124808, 'Elsemia', 'Marianne Helene "Els" van Noorduyn', 'F', 'NED'
+ 	125010, 'Patricia', 'Jean "Patty" van Wolvelaere-Johnson', 'F', 'USA'
+ 	125096, 'Geoffrey', 'Peter "Geoff" Vanderstock', 'M', 'USA'
+ 	125117, 'Carlos', 'Enrique Vanegas Munguia', 'M', 'NCA'
+ 	125325, 'Vilmos', 'Varj', 'M', 'HUN'
+ 	125359, 'Pekka', 'Antero Vasala', 'M', 'FIN'
+ 	125759, 'Donald', 'Danilo "Don" Vlez Espinoza', 'M', 'NCA'
+ 	125916, 'Porfirio', 'Veras Mercedes', 'M', 'DOM'
+ 	125930, 'Ingrda', 'Verbele (-Barkne)', 'F', 'URS'
+ 	126246, 'Magali', 'Vettorazzo', 'F', 'ITA'
+ 	126311, 'Josefa', 'Vicent Riesgo', 'F', 'URU'
+ 	126597, 'Jean-Paul', 'Villain', 'M', 'FRA'
+ 	126801, 'Ioannis', 'Virvilis', 'M', 'GRE'
+ 	126816, 'Viorica', 'Viscopoleanu (Belmega-)', 'F', 'ROU'
+ 	126826, 'Vittorio', 'Visini', 'M', 'ITA'
+ 	126943, 'Jorge', 'L. Vizcarrondo Somohano', 'M', 'PUR'
+ 	126978, 'Evangelos', 'Vlasis', 'M', 'GRE'
+ 	127381, 'Werner', 'Konrad Graf von Moltke', 'M', 'FRG'
+ 	127411, 'Thomas', 'Frederick "Tom" Von Ruden', 'M', 'USA'
+ 	127441, 'Urs', 'von Wartburg', 'M', 'SUI'
+ 	127816, 'Thomas', '"Tom" Waddell (Flubacher-)', 'M', 'USA'
+ 	127841, 'Jean', 'Wadoux', 'M', 'FRA'
+ 	127921, 'Wilhelm', '"Willi" Wagner', 'M', 'FRG'
+ 	128039, 'Hans-Joachim', 'Walde', 'M', 'FRG'
+ 	128084, 'Arthur', 'Franklin "Art" Walker; Jr.', 'M', 'USA'
+ 	128214, 'Karin', 'Elisabeth Wallgren-Lundgren', 'F', 'SWE'
+ 	128980, 'Martha', 'Rae Watson', 'F', 'USA'
+ 	128983, 'Peter', 'Bruce Watson', 'M', 'AUS'
+ 	129057, 'Anne', 'Lise Wrness (-Wraa)', 'F', 'NOR'
+ 	129091, 'John', 'Albert Webb', 'M', 'GBR'
+ 	129220, 'Wilfriedt', '"Wilf" Wedmann', 'M', 'CAN'
+ 	129315, 'Gerhard', 'Weidner', 'M', 'FRG'
+ 	129471, 'Wilhelm', 'Piotr Weistand', 'M', 'POL'
+ 	129562, 'Robert', 'Peter Welsh', 'M', 'NZL'
+ 	129704, 'Jan', 'Werner', 'M', 'POL'
+ 	129755, 'Herbert', 'Wessel', 'M', 'GDR'
+ 	129833, 'Lieselotte', '"Liesel" Westermann (-Krieg)', 'F', 'FRG'
+ 	129893, 'Kjellfred', 'Weum', 'M', 'NOR'
+ 	129958, 'John', 'H. Whetton', 'M', 'GBR'
+ 	130031, 'Willye', 'Brown White', 'F', 'USA'
+ 	130082, 'Ronald', 'Howard "Ron" Whitney', 'M', 'USA'
+ 	130194, 'Barbara', 'Wieck (-Kische)', 'F', 'GDR'
+ 	130198, 'Burghild', 'Wieczorek (Neumann-)', 'F', 'GDR'
+ 	130214, 'Hansruedi', 'Wiedmer', 'M', 'SUI'
+ 	130279, 'Thomas', 'Wieser', 'M', 'SUI'
+ 	130287, 'Ulla-Britt', 'Wieslander (-Rosberg)', 'F', 'SWE'
+ 	130787, 'Ann', 'Shirley Wilson (-Simmonds)', 'F', 'GBR'
+ 	130940, 'Martin', 'John Winbolt-Lewis', 'M', 'GBR'
+ 	130980, 'Jennifer', 'Anne "Jenny" Wingerson-Meldrum', 'F', 'CAN'
+ 	131111, 'Gerald', 'Lloyd "Jerry" Wisdom', 'M', 'BAH'
+ 	131283, 'Mamo', 'Wolde', 'M', 'ETH'
+ 	131286, 'Tadesse', 'Wolde-Medhin', 'M', 'ETH'
+ 	131336, 'Klaus', 'Wolfermann', 'M', 'FRG'
+ 	131541, 'George', 'Roger Woods', 'M', 'USA'
+ 	131762, 'Wu', 'Ah-Min', 'M', 'TPE'
+ 	131847, 'Gerhard', 'Wucherer', 'M', 'FRG'
+ 	131952, 'Lodewijk', '"Lode" Wyns', 'M', 'BEL'
+ 	131965, 'Heinz', 'Beat Wyss', 'M', 'SUI'
+ 	132252, 'Hiroomi', 'Yamada', 'M', 'JPN'
+ 	132797, 'Yeh', 'Chu-Mei', 'F', 'TPE'
+ 	133205, 'George', 'L. Young', 'M', 'USA'
+ 	133222, 'Lawrence', 'Dean "Larry" Young', 'M', 'USA'
+ 	133430, 'Kiyoo', 'Yui', 'M', 'JPN'
+ 	133530, 'Snezhana', 'Marinova Yurukova (Dimitrova-)', 'F', 'BUL'
+ 	133621, 'Thomas', 'Michael Zacharias', 'M', 'FRG'
+ 	133866, 'Ahmed', 'Zairi Zammel', 'M', 'TUN'
+ 	134208, 'Elbieta', 'Regina ebrowska (Bednarek-)', 'F', 'POL'
+ 	134363, 'Michael', 'Zerbes', 'M', 'GDR'
+ 	134695, 'Lyudmila', 'Ilyinichna Zharkova-Maslakova', 'F', 'URS'
+ 	134715, 'Mikhail', 'Zhelev Stoykov', 'M', 'BUL'
+ 	134719, 'Mikhail', 'Nikolayevich Zhelobovsky', 'M', 'URS'
+ 	135009, 'Anna', 'Zimina (-Zaytseva)', 'F', 'URS'
+ 	135069, 'Douglas', 'Zinkala', 'M', 'ZAM'
+ 	135220, 'Aleksandr', 'Zolotarev', 'M', 'URS'
+ 	135313, 'Gyula', 'Zsivtzky', 'M', 'HUN' 
+}
+
+EventParticipant = { 
+	idAthlete:number, idEvent:number, ranking:number 
+	870, 1, 1
+ 	1597, 1, 2
+ 	1747, 1, 3
+ 	2438, 1, 4
+ 	3380, 1, 5
+ 	3666, 1, 6
+ 	6759, 1, 7
+ 	11467, 1, 8
+ 	14323, 1, 9
+ 	16805, 1, 10
+ 	21958, 1, 11
+ 	22579, 1, 12
+ 	24357, 1, 13
+ 	24919, 1, 14
+ 	25787, 1, 15
+ 	26526, 1, 16
+ 	29946, 1, 17
+ 	34030, 1, 18
+ 	34162, 1, 19
+ 	37183, 1, 20
+ 	38608, 1, 21
+ 	38874, 1, 22
+ 	41481, 1, 23
+ 	44167, 1, 24
+ 	44320, 1, 25
+ 	48010, 1, 26
+ 	48890, 1, 27
+ 	55527, 1, 28
+ 	56850, 1, 29
+ 	59775, 1, 30
+ 	60401, 1, 31
+ 	64984, 1, 32
+ 	68072, 1, 33
+ 	68102, 1, 34
+ 	74582, 1, 35
+ 	76202, 1, 36
+ 	77688, 1, 37
+ 	77846, 1, 38
+ 	78022, 1, 39
+ 	78809, 1, 40
+ 	81224, 1, 41
+ 	81664, 1, 42
+ 	82384, 1, 43
+ 	82872, 1, 44
+ 	83633, 1, 45
+ 	88869, 1, 46
+ 	92768, 1, 47
+ 	92970, 1, 48
+ 	93235, 1, 49
+ 	93288, 1, 50
+ 	93391, 1, 51
+ 	97258, 1, 52
+ 	100765, 1, 53
+ 	101888, 1, 54
+ 	103468, 1, 55
+ 	103792, 1, 56
+ 	105917, 1, 57
+ 	109173, 1, 58
+ 	109266, 1, 59
+ 	110318, 1, 60
+ 	110568, 1, 61
+ 	110668, 1, 62
+ 	114717, 1, 63
+ 	114978, 1, 64
+ 	115188, 1, 65
+ 	116296, 1, 66
+ 	116724, 1, 67
+ 	119147, 1, 68
+ 	119442, 1, 69
+ 	119707, 1, 70
+ 	121395, 1, 71
+ 	123538, 1, 72
+ 	131283, 1, 73
+ 	133205, 1, 74
+ 	135069, 1, 75
+ 	870, 2, 1
+ 	1597, 2, 2
+ 	1747, 2, 3
+ 	2438, 2, 4
+ 	3380, 2, 5
+ 	3666, 2, 6
+ 	6759, 2, 7
+ 	11467, 2, 8
+ 	14323, 2, 9
+ 	16805, 2, 10
+ 	21958, 2, 11
+ 	22579, 2, 12
+ 	24357, 2, 13
+ 	24919, 2, 14
+ 	25787, 2, 15
+ 	26526, 2, 16
+ 	29946, 2, 17
+ 	34030, 2, 18
+ 	34162, 2, 19
+ 	37183, 2, 20
+ 	38608, 2, 21
+ 	38874, 2, 22
+ 	41481, 2, 23
+ 	44167, 2, 24
+ 	44320, 2, 25
+ 	48010, 2, 26
+ 	48890, 2, 27
+ 	55527, 2, 28
+ 	56850, 2, 29
+ 	59775, 2, 30
+ 	60401, 2, 31
+ 	64984, 2, 32
+ 	68072, 2, 33
+ 	68102, 2, 34
+ 	74582, 2, 35
+ 	76202, 2, 36
+ 	77688, 2, 37
+ 	77846, 2, 38
+ 	78022, 2, 39
+ 	78809, 2, 40
+ 	81224, 2, 41
+ 	81664, 2, 42
+ 	82384, 2, 43
+ 	82872, 2, 44
+ 	83633, 2, 45
+ 	88869, 2, 46
+ 	92768, 2, 47
+ 	92970, 2, 48
+ 	93235, 2, 49
+ 	93288, 2, 50
+ 	93391, 2, 51
+ 	97258, 2, 52
+ 	100765, 2, 53
+ 	101888, 2, 54
+ 	103468, 2, 55
+ 	103792, 2, 56
+ 	105917, 2, 57
+ 	109173, 2, 58
+ 	109266, 2, 59
+ 	110318, 2, 60
+ 	110568, 2, 61
+ 	110668, 2, 62
+ 	114717, 2, 63
+ 	114978, 2, 64
+ 	115188, 2, 65
+ 	116296, 2, 66
+ 	116724, 2, 67
+ 	119147, 2, 68
+ 	119442, 2, 69
+ 	119707, 2, 70
+ 	121395, 2, 71
+ 	123538, 2, 72
+ 	131283, 2, 73
+ 	133205, 2, 74
+ 	135069, 2, 75
+ 	870, 3, 73
+ 	1597, 3, 31
+ 	1747, 3, 56
+ 	2438, 3, 4
+ 	3380, 3, 5
+ 	3666, 3, 6
+ 	6759, 3, 7
+ 	11467, 3, 8
+ 	14323, 3, 9
+ 	16805, 3, 10
+ 	21958, 3, 11
+ 	22579, 3, 12
+ 	24357, 3, 13
+ 	24919, 3, 14
+ 	25787, 3, 15
+ 	26526, 3, 16
+ 	29946, 3, 17
+ 	34030, 3, 18
+ 	34162, 3, 19
+ 	37183, 3, 20
+ 	38608, 3, 21
+ 	38874, 3, 22
+ 	41481, 3, 23
+ 	44167, 3, 24
+ 	44320, 3, 25
+ 	48010, 3, 26
+ 	48890, 3, 27
+ 	55527, 3, 28
+ 	56850, 3, 29
+ 	59775, 3, 30
+ 	60401, 3, 2
+ 	64984, 3, 32
+ 	68072, 3, 33
+ 	68102, 3, 34
+ 	74582, 3, 35
+ 	76202, 3, 36
+ 	77688, 3, 37
+ 	77846, 3, 38
+ 	78022, 3, 39
+ 	78809, 3, 40
+ 	81224, 3, 41
+ 	81664, 3, 42
+ 	82384, 3, 43
+ 	82872, 3, 44
+ 	83633, 3, 45
+ 	88869, 3, 46
+ 	92768, 3, 47
+ 	92970, 3, 48
+ 	93235, 3, 49
+ 	93288, 3, 50
+ 	93391, 3, 51
+ 	97258, 3, 52
+ 	100765, 3, 53
+ 	101888, 3, 54
+ 	103468, 3, 55
+ 	103792, 3, 3
+ 	105917, 3, 57
+ 	109173, 3, 58
+ 	109266, 3, 59
+ 	110318, 3, 60
+ 	110568, 3, 61
+ 	110668, 3, 62
+ 	114717, 3, 63
+ 	114978, 3, 64
+ 	115188, 3, 65
+ 	116296, 3, 66
+ 	116724, 3, 67
+ 	119147, 3, 68
+ 	119442, 3, 69
+ 	119707, 3, 70
+ 	121395, 3, 71
+ 	123538, 3, 72
+ 	131283, 3, 1
+ 	133205, 3, 74
+ 	135069, 3, 75
+ 	313, 4, 21
+ 	1326, 4, 35
+ 	5034, 4, 20
+ 	5482, 4, 4
+ 	7430, 4, 5
+ 	9261, 4, 6
+ 	17503, 4, 7
+ 	20178, 4, 8
+ 	20715, 4, 9
+ 	27232, 4, 10
+ 	30402, 4, 11
+ 	31588, 4, 12
+ 	32085, 4, 13
+ 	32814, 4, 14
+ 	33301, 4, 15
+ 	34638, 4, 16
+ 	35268, 4, 17
+ 	39860, 4, 18
+ 	41616, 4, 19
+ 	42662, 4, 3
+ 	48696, 4, 1
+ 	50260, 4, 22
+ 	51747, 4, 23
+ 	54180, 4, 24
+ 	54652, 4, 25
+ 	55726, 4, 26
+ 	58561, 4, 27
+ 	59314, 4, 28
+ 	62411, 4, 29
+ 	64955, 4, 30
+ 	69228, 4, 31
+ 	74452, 4, 32
+ 	77912, 4, 33
+ 	79131, 4, 34
+ 	79915, 4, 2
+ 	81414, 4, 36
+ 	81416, 4, 37
+ 	81524, 4, 38
+ 	81955, 4, 39
+ 	87073, 4, 40
+ 	87241, 4, 41
+ 	88371, 4, 42
+ 	89085, 4, 43
+ 	89199, 4, 44
+ 	92988, 4, 45
+ 	95344, 4, 46
+ 	96802, 4, 47
+ 	98650, 4, 48
+ 	99212, 4, 49
+ 	101470, 4, 50
+ 	105193, 4, 51
+ 	105434, 4, 52
+ 	105650, 4, 53
+ 	105690, 4, 54
+ 	106718, 4, 55
+ 	107160, 4, 56
+ 	110310, 4, 57
+ 	111326, 4, 58
+ 	115936, 4, 59
+ 	116069, 4, 60
+ 	117176, 4, 61
+ 	125916, 4, 62
+ 	126943, 4, 63
+ 	130214, 4, 64
+ 	131847, 4, 65
+ 	5594, 5, 20
+ 	5697, 5, 29
+ 	6662, 5, 22
+ 	7117, 5, 4
+ 	9719, 5, 5
+ 	10907, 5, 6
+ 	11156, 5, 7
+ 	13071, 5, 8
+ 	16221, 5, 9
+ 	16683, 5, 10
+ 	17694, 5, 11
+ 	18588, 5, 12
+ 	25623, 5, 13
+ 	28291, 5, 14
+ 	28765, 5, 15
+ 	29094, 5, 16
+ 	29221, 5, 17
+ 	31085, 5, 18
+ 	31630, 5, 19
+ 	33457, 5, 1
+ 	36202, 5, 21
+ 	36996, 5, 3
+ 	37968, 5, 23
+ 	40034, 5, 24
+ 	42317, 5, 25
+ 	46123, 5, 26
+ 	48429, 5, 27
+ 	51237, 5, 28
+ 	53493, 5, 2
+ 	54241, 5, 30
+ 	57011, 5, 31
+ 	60449, 5, 32
+ 	64948, 5, 33
+ 	70866, 5, 34
+ 	73051, 5, 35
+ 	73372, 5, 36
+ 	73794, 5, 37
+ 	75701, 5, 38
+ 	78753, 5, 39
+ 	79916, 5, 40
+ 	83080, 5, 41
+ 	83163, 5, 42
+ 	84421, 5, 43
+ 	85883, 5, 44
+ 	87455, 5, 45
+ 	89085, 5, 46
+ 	90028, 5, 47
+ 	93050, 5, 48
+ 	94923, 5, 49
+ 	103273, 5, 50
+ 	110772, 5, 51
+ 	119102, 5, 52
+ 	129704, 5, 53
+ 	130940, 5, 54
+ 	134363, 5, 55
+ 	4997, 6, 1
+ 	6889, 6, 2
+ 	7637, 6, 3
+ 	10143, 6, 4
+ 	10394, 6, 5
+ 	14054, 6, 6
+ 	14294, 6, 7
+ 	23049, 6, 8
+ 	24160, 6, 9
+ 	27031, 6, 10
+ 	27098, 6, 11
+ 	31040, 6, 12
+ 	35404, 6, 13
+ 	37153, 6, 14
+ 	38737, 6, 15
+ 	41546, 6, 16
+ 	43191, 6, 17
+ 	44543, 6, 18
+ 	44606, 6, 19
+ 	45808, 6, 20
+ 	49776, 6, 21
+ 	52631, 6, 22
+ 	54919, 6, 23
+ 	58429, 6, 24
+ 	61020, 6, 25
+ 	61513, 6, 26
+ 	64319, 6, 27
+ 	65433, 6, 28
+ 	70438, 6, 29
+ 	74212, 6, 30
+ 	83520, 6, 31
+ 	85332, 6, 32
+ 	85877, 6, 33
+ 	86970, 6, 34
+ 	87343, 6, 35
+ 	88018, 6, 36
+ 	92410, 6, 37
+ 	97883, 6, 38
+ 	98597, 6, 39
+ 	99265, 6, 40
+ 	100974, 6, 41
+ 	103917, 6, 42
+ 	104287, 6, 43
+ 	104905, 6, 44
+ 	110799, 6, 45
+ 	117589, 6, 46
+ 	121837, 6, 47
+ 	122606, 6, 48
+ 	125359, 6, 49
+ 	126801, 6, 50
+ 	127411, 6, 51
+ 	128983, 6, 52
+ 	129958, 6, 53
+ 	134719, 6, 54
+ 	4997, 7, 1
+ 	6889, 7, 2
+ 	7637, 7, 3
+ 	10143, 7, 4
+ 	10394, 7, 5
+ 	14054, 7, 6
+ 	14294, 7, 7
+ 	23049, 7, 8
+ 	24160, 7, 9
+ 	27031, 7, 10
+ 	27098, 7, 11
+ 	31040, 7, 12
+ 	35404, 7, 13
+ 	37153, 7, 14
+ 	38737, 7, 15
+ 	41546, 7, 16
+ 	43191, 7, 17
+ 	44543, 7, 18
+ 	44606, 7, 19
+ 	45808, 7, 20
+ 	49776, 7, 21
+ 	52631, 7, 22
+ 	54919, 7, 23
+ 	58429, 7, 24
+ 	61020, 7, 25
+ 	61513, 7, 26
+ 	64319, 7, 27
+ 	65433, 7, 28
+ 	70438, 7, 29
+ 	74212, 7, 30
+ 	83520, 7, 31
+ 	85332, 7, 32
+ 	85877, 7, 33
+ 	86970, 7, 34
+ 	87343, 7, 35
+ 	88018, 7, 36
+ 	92410, 7, 37
+ 	97883, 7, 38
+ 	98597, 7, 39
+ 	99265, 7, 40
+ 	100974, 7, 41
+ 	103917, 7, 42
+ 	104287, 7, 43
+ 	104905, 7, 44
+ 	110799, 7, 45
+ 	117589, 7, 46
+ 	121837, 7, 47
+ 	122606, 7, 48
+ 	125359, 7, 49
+ 	126801, 7, 50
+ 	127411, 7, 51
+ 	128983, 7, 52
+ 	129958, 7, 53
+ 	134719, 7, 54
+ 	4997, 8, 24
+ 	6889, 8, 42
+ 	7637, 8, 48
+ 	10143, 8, 4
+ 	10394, 8, 5
+ 	14054, 8, 6
+ 	14294, 8, 7
+ 	23049, 8, 8
+ 	24160, 8, 9
+ 	27031, 8, 10
+ 	27098, 8, 11
+ 	31040, 8, 12
+ 	35404, 8, 13
+ 	37153, 8, 14
+ 	38737, 8, 15
+ 	41546, 8, 16
+ 	43191, 8, 17
+ 	44543, 8, 18
+ 	44606, 8, 19
+ 	45808, 8, 20
+ 	49776, 8, 21
+ 	52631, 8, 22
+ 	54919, 8, 23
+ 	58429, 8, 1
+ 	61020, 8, 25
+ 	61513, 8, 26
+ 	64319, 8, 27
+ 	65433, 8, 28
+ 	70438, 8, 29
+ 	74212, 8, 30
+ 	83520, 8, 31
+ 	85332, 8, 32
+ 	85877, 8, 33
+ 	86970, 8, 34
+ 	87343, 8, 35
+ 	88018, 8, 36
+ 	92410, 8, 37
+ 	97883, 8, 38
+ 	98597, 8, 39
+ 	99265, 8, 40
+ 	100974, 8, 41
+ 	103917, 8, 2
+ 	104287, 8, 43
+ 	104905, 8, 44
+ 	110799, 8, 45
+ 	117589, 8, 46
+ 	121837, 8, 47
+ 	122606, 8, 3
+ 	125359, 8, 49
+ 	126801, 8, 50
+ 	127411, 8, 51
+ 	128983, 8, 52
+ 	129958, 8, 53
+ 	134719, 8, 54
+ 	649, 9, 1
+ 	887, 9, 2
+ 	5034, 9, 3
+ 	5482, 9, 4
+ 	5697, 9, 5
+ 	7430, 9, 6
+ 	7583, 9, 7
+ 	10798, 9, 8
+ 	17503, 9, 9
+ 	18216, 9, 10
+ 	18290, 9, 11
+ 	20715, 9, 12
+ 	23151, 9, 13
+ 	29916, 9, 14
+ 	31719, 9, 15
+ 	31795, 9, 16
+ 	36635, 9, 17
+ 	36898, 9, 18
+ 	39860, 9, 19
+ 	41616, 9, 20
+ 	42317, 9, 21
+ 	43861, 9, 22
+ 	48684, 9, 23
+ 	50260, 9, 24
+ 	52828, 9, 25
+ 	54180, 9, 26
+ 	54652, 9, 27
+ 	55414, 9, 28
+ 	64948, 9, 29
+ 	64955, 9, 30
+ 	69228, 9, 31
+ 	76126, 9, 32
+ 	79131, 9, 33
+ 	81955, 9, 34
+ 	86955, 9, 35
+ 	87073, 9, 36
+ 	95383, 9, 37
+ 	97882, 9, 38
+ 	99212, 9, 39
+ 	101290, 9, 40
+ 	102264, 9, 41
+ 	105434, 9, 42
+ 	109996, 9, 43
+ 	112418, 9, 44
+ 	114559, 9, 45
+ 	115936, 9, 46
+ 	120170, 9, 47
+ 	121247, 9, 48
+ 	125916, 9, 49
+ 	130214, 9, 50
+ 	649, 10, 1
+ 	887, 10, 2
+ 	5034, 10, 3
+ 	5482, 10, 4
+ 	5697, 10, 5
+ 	7430, 10, 6
+ 	7583, 10, 7
+ 	10798, 10, 8
+ 	17503, 10, 9
+ 	18216, 10, 10
+ 	18290, 10, 11
+ 	20715, 10, 12
+ 	23151, 10, 13
+ 	29916, 10, 14
+ 	31719, 10, 15
+ 	31795, 10, 16
+ 	36635, 10, 17
+ 	36898, 10, 18
+ 	39860, 10, 19
+ 	41616, 10, 20
+ 	42317, 10, 21
+ 	43861, 10, 22
+ 	48684, 10, 23
+ 	50260, 10, 24
+ 	52828, 10, 25
+ 	54180, 10, 26
+ 	54652, 10, 27
+ 	55414, 10, 28
+ 	64948, 10, 29
+ 	64955, 10, 30
+ 	69228, 10, 31
+ 	76126, 10, 32
+ 	79131, 10, 33
+ 	81955, 10, 34
+ 	86955, 10, 35
+ 	87073, 10, 36
+ 	95383, 10, 37
+ 	97882, 10, 38
+ 	99212, 10, 39
+ 	101290, 10, 40
+ 	102264, 10, 41
+ 	105434, 10, 42
+ 	109996, 10, 43
+ 	112418, 10, 44
+ 	114559, 10, 45
+ 	115936, 10, 46
+ 	120170, 10, 47
+ 	121247, 10, 48
+ 	125916, 10, 49
+ 	130214, 10, 50
+ 	649, 11, 44
+ 	887, 11, 35
+ 	5034, 11, 11
+ 	5482, 11, 4
+ 	5697, 11, 5
+ 	7430, 11, 6
+ 	7583, 11, 7
+ 	10798, 11, 8
+ 	17503, 11, 9
+ 	18216, 11, 10
+ 	18290, 11, 3
+ 	20715, 11, 12
+ 	23151, 11, 13
+ 	29916, 11, 14
+ 	31719, 11, 15
+ 	31795, 11, 16
+ 	36635, 11, 17
+ 	36898, 11, 18
+ 	39860, 11, 19
+ 	41616, 11, 20
+ 	42317, 11, 21
+ 	43861, 11, 22
+ 	48684, 11, 23
+ 	50260, 11, 24
+ 	52828, 11, 25
+ 	54180, 11, 26
+ 	54652, 11, 27
+ 	55414, 11, 28
+ 	64948, 11, 29
+ 	64955, 11, 30
+ 	69228, 11, 31
+ 	76126, 11, 32
+ 	79131, 11, 33
+ 	81955, 11, 34
+ 	86955, 11, 2
+ 	87073, 11, 36
+ 	95383, 11, 37
+ 	97882, 11, 38
+ 	99212, 11, 39
+ 	101290, 11, 40
+ 	102264, 11, 41
+ 	105434, 11, 42
+ 	109996, 11, 43
+ 	112418, 11, 1
+ 	114559, 11, 45
+ 	115936, 11, 46
+ 	120170, 11, 47
+ 	121247, 11, 48
+ 	125916, 11, 49
+ 	130214, 11, 50
+ 	841, 12, 13
+ 	3415, 12, 26
+ 	5446, 12, 16
+ 	6754, 12, 4
+ 	9658, 12, 5
+ 	18588, 12, 6
+ 	18633, 12, 7
+ 	19180, 12, 8
+ 	23920, 12, 9
+ 	24160, 12, 10
+ 	24194, 12, 11
+ 	27098, 12, 12
+ 	29655, 12, 1
+ 	30461, 12, 14
+ 	31040, 12, 15
+ 	34151, 12, 3
+ 	37153, 12, 17
+ 	37323, 12, 18
+ 	38737, 12, 19
+ 	44543, 12, 20
+ 	49776, 12, 21
+ 	51237, 12, 22
+ 	52631, 12, 23
+ 	56320, 12, 24
+ 	58653, 12, 25
+ 	60620, 12, 2
+ 	65293, 12, 27
+ 	66791, 12, 28
+ 	70866, 12, 29
+ 	78753, 12, 30
+ 	83951, 12, 31
+ 	84062, 12, 32
+ 	84895, 12, 33
+ 	90101, 12, 34
+ 	93050, 12, 35
+ 	95324, 12, 36
+ 	98597, 12, 37
+ 	104412, 12, 38
+ 	108129, 12, 39
+ 	110155, 12, 40
+ 	110551, 12, 41
+ 	117589, 12, 42
+ 	124775, 12, 43
+ 	1680, 13, 1
+ 	6878, 13, 2
+ 	7366, 13, 3
+ 	10878, 13, 4
+ 	12648, 13, 5
+ 	14258, 13, 6
+ 	14374, 13, 7
+ 	19924, 13, 8
+ 	20609, 13, 9
+ 	22139, 13, 10
+ 	35011, 13, 11
+ 	40570, 13, 12
+ 	41195, 13, 13
+ 	47681, 13, 14
+ 	51713, 13, 15
+ 	53515, 13, 16
+ 	58066, 13, 17
+ 	59700, 13, 18
+ 	60859, 13, 19
+ 	68396, 13, 20
+ 	71953, 13, 21
+ 	75172, 13, 22
+ 	79208, 13, 23
+ 	79231, 13, 24
+ 	79886, 13, 25
+ 	85117, 13, 26
+ 	92528, 13, 27
+ 	95087, 13, 28
+ 	97879, 13, 29
+ 	99677, 13, 30
+ 	100626, 13, 31
+ 	102283, 13, 32
+ 	112208, 13, 33
+ 	113297, 13, 34
+ 	114986, 13, 35
+ 	117509, 13, 36
+ 	119108, 13, 37
+ 	123000, 13, 38
+ 	124620, 13, 39
+ 	126311, 13, 40
+ 	130287, 13, 41
+ 	134695, 13, 42
+ 	1680, 14, 38
+ 	6878, 14, 11
+ 	7366, 14, 36
+ 	10878, 14, 4
+ 	12648, 14, 5
+ 	14258, 14, 6
+ 	14374, 14, 7
+ 	19924, 14, 8
+ 	20609, 14, 9
+ 	22139, 14, 10
+ 	35011, 14, 2
+ 	40570, 14, 12
+ 	41195, 14, 13
+ 	47681, 14, 14
+ 	51713, 14, 15
+ 	53515, 14, 16
+ 	58066, 14, 17
+ 	59700, 14, 18
+ 	60859, 14, 19
+ 	68396, 14, 20
+ 	71953, 14, 21
+ 	75172, 14, 22
+ 	79208, 14, 23
+ 	79231, 14, 24
+ 	79886, 14, 25
+ 	85117, 14, 26
+ 	92528, 14, 27
+ 	95087, 14, 28
+ 	97879, 14, 29
+ 	99677, 14, 30
+ 	100626, 14, 31
+ 	102283, 14, 32
+ 	112208, 14, 33
+ 	113297, 14, 34
+ 	114986, 14, 35
+ 	117509, 14, 3
+ 	119108, 14, 37
+ 	123000, 14, 1
+ 	124620, 14, 39
+ 	126311, 14, 40
+ 	130287, 14, 41
+ 	134695, 14, 42
+ 	3162, 15, 1
+ 	3273, 15, 2
+ 	6190, 15, 3
+ 	11864, 15, 4
+ 	15413, 15, 5
+ 	15884, 15, 6
+ 	23037, 15, 7
+ 	24498, 15, 8
+ 	26514, 15, 9
+ 	33349, 15, 10
+ 	46107, 15, 11
+ 	48173, 15, 12
+ 	53124, 15, 13
+ 	57633, 15, 14
+ 	61934, 15, 15
+ 	64661, 15, 16
+ 	78696, 15, 17
+ 	80253, 15, 18
+ 	80538, 15, 19
+ 	81087, 15, 20
+ 	82214, 15, 21
+ 	86150, 15, 22
+ 	87667, 15, 23
+ 	90099, 15, 24
+ 	93629, 15, 25
+ 	97883, 15, 26
+ 	99739, 15, 27
+ 	100996, 15, 28
+ 	101010, 15, 29
+ 	101888, 15, 30
+ 	105891, 15, 31
+ 	117329, 15, 32
+ 	119442, 15, 33
+ 	124221, 15, 34
+ 	126597, 15, 35
+ 	127921, 15, 36
+ 	129562, 15, 37
+ 	131286, 15, 38
+ 	133205, 15, 39
+ 	134715, 15, 40
+ 	3162, 16, 4
+ 	3273, 16, 15
+ 	6190, 16, 39
+ 	11864, 16, 1
+ 	15413, 16, 5
+ 	15884, 16, 6
+ 	23037, 16, 7
+ 	24498, 16, 8
+ 	26514, 16, 9
+ 	33349, 16, 10
+ 	46107, 16, 11
+ 	48173, 16, 12
+ 	53124, 16, 13
+ 	57633, 16, 14
+ 	61934, 16, 2
+ 	64661, 16, 16
+ 	78696, 16, 17
+ 	80253, 16, 18
+ 	80538, 16, 19
+ 	81087, 16, 20
+ 	82214, 16, 21
+ 	86150, 16, 22
+ 	87667, 16, 23
+ 	90099, 16, 24
+ 	93629, 16, 25
+ 	97883, 16, 26
+ 	99739, 16, 27
+ 	100996, 16, 28
+ 	101010, 16, 29
+ 	101888, 16, 30
+ 	105891, 16, 31
+ 	117329, 16, 32
+ 	119442, 16, 33
+ 	124221, 16, 34
+ 	126597, 16, 35
+ 	127921, 16, 36
+ 	129562, 16, 37
+ 	131286, 16, 38
+ 	133205, 16, 3
+ 	134715, 16, 40
+ 	3162, 17, 1
+ 	3273, 17, 2
+ 	6190, 17, 3
+ 	11864, 17, 4
+ 	15413, 17, 5
+ 	15884, 17, 6
+ 	23037, 17, 7
+ 	24498, 17, 8
+ 	26514, 17, 9
+ 	33349, 17, 10
+ 	46107, 17, 11
+ 	48173, 17, 12
+ 	53124, 17, 13
+ 	57633, 17, 14
+ 	61934, 17, 15
+ 	64661, 17, 16
+ 	78696, 17, 17
+ 	80253, 17, 18
+ 	80538, 17, 19
+ 	81087, 17, 20
+ 	82214, 17, 21
+ 	86150, 17, 22
+ 	87667, 17, 23
+ 	90099, 17, 24
+ 	93629, 17, 25
+ 	97883, 17, 26
+ 	99739, 17, 27
+ 	100996, 17, 28
+ 	101010, 17, 29
+ 	101888, 17, 30
+ 	105891, 17, 31
+ 	117329, 17, 32
+ 	119442, 17, 33
+ 	124221, 17, 34
+ 	126597, 17, 35
+ 	127921, 17, 36
+ 	129562, 17, 37
+ 	131286, 17, 38
+ 	133205, 17, 39
+ 	134715, 17, 40
+ 	926, 18, 11
+ 	6523, 18, 13
+ 	12283, 18, 35
+ 	14888, 18, 4
+ 	21881, 18, 5
+ 	25806, 18, 6
+ 	27029, 18, 7
+ 	28456, 18, 8
+ 	32362, 18, 9
+ 	35417, 18, 10
+ 	38252, 18, 1
+ 	40558, 18, 12
+ 	58429, 18, 2
+ 	60847, 18, 14
+ 	73172, 18, 15
+ 	75771, 18, 16
+ 	76189, 18, 17
+ 	77177, 18, 18
+ 	81770, 18, 19
+ 	83633, 18, 20
+ 	83892, 18, 21
+ 	86970, 18, 22
+ 	93391, 18, 23
+ 	97661, 18, 24
+ 	97883, 18, 25
+ 	103565, 18, 26
+ 	106329, 18, 27
+ 	107308, 18, 28
+ 	108014, 18, 29
+ 	109260, 18, 30
+ 	110568, 18, 31
+ 	114547, 18, 32
+ 	117003, 18, 33
+ 	118874, 18, 34
+ 	119147, 18, 3
+ 	124028, 18, 36
+ 	127841, 18, 37
+ 	131283, 18, 38
+ 	133866, 18, 39
+ 	605, 19, 13
+ 	606, 19, 9
+ 	2560, 19, 15
+ 	7248, 19, 4
+ 	13024, 19, 5
+ 	14321, 19, 6
+ 	15575, 19, 7
+ 	17861, 19, 8
+ 	18683, 19, 2
+ 	23924, 19, 10
+ 	29611, 19, 11
+ 	32338, 19, 12
+ 	36401, 19, 1
+ 	38877, 19, 14
+ 	39163, 19, 3
+ 	49734, 19, 16
+ 	50747, 19, 17
+ 	51637, 19, 18
+ 	63305, 19, 19
+ 	72331, 19, 20
+ 	79787, 19, 21
+ 	88572, 19, 22
+ 	90707, 19, 23
+ 	92578, 19, 24
+ 	96336, 19, 25
+ 	104404, 19, 26
+ 	108656, 19, 27
+ 	110277, 19, 28
+ 	111023, 19, 29
+ 	111850, 19, 30
+ 	112535, 19, 31
+ 	113835, 19, 32
+ 	116223, 19, 33
+ 	120701, 19, 34
+ 	121531, 19, 35
+ 	122675, 19, 36
+ 	129220, 19, 37
+ 	130279, 19, 38
+ 	133621, 19, 39
+ 	2255, 20, 36
+ 	21881, 20, 37
+ 	27029, 20, 7
+ 	32362, 20, 4
+ 	32799, 20, 5
+ 	34030, 20, 6
+ 	38252, 20, 3
+ 	44486, 20, 8
+ 	48592, 20, 9
+ 	49220, 20, 10
+ 	58429, 20, 11
+ 	60847, 20, 12
+ 	66718, 20, 13
+ 	69055, 20, 14
+ 	73172, 20, 15
+ 	73490, 20, 16
+ 	75771, 20, 17
+ 	76189, 20, 18
+ 	76202, 20, 19
+ 	78022, 20, 20
+ 	78324, 20, 21
+ 	83633, 20, 22
+ 	83892, 20, 23
+ 	85215, 20, 24
+ 	93391, 20, 25
+ 	94430, 20, 26
+ 	95894, 20, 27
+ 	106329, 20, 28
+ 	110568, 20, 29
+ 	112423, 20, 30
+ 	114547, 20, 31
+ 	116837, 20, 32
+ 	117003, 20, 33
+ 	117506, 20, 34
+ 	117775, 20, 35
+ 	119147, 20, 1
+ 	131283, 20, 2
+ 	1117, 21, 1
+ 	3968, 21, 2
+ 	18070, 21, 3
+ 	21799, 21, 4
+ 	22382, 21, 5
+ 	24055, 21, 6
+ 	27240, 21, 7
+ 	27348, 21, 8
+ 	32244, 21, 9
+ 	38744, 21, 10
+ 	42928, 21, 11
+ 	48026, 21, 12
+ 	49265, 21, 13
+ 	52151, 21, 14
+ 	58579, 21, 15
+ 	60833, 21, 16
+ 	61351, 21, 17
+ 	65780, 21, 18
+ 	69092, 21, 19
+ 	69809, 21, 20
+ 	70081, 21, 21
+ 	73447, 21, 22
+ 	78976, 21, 23
+ 	85341, 21, 24
+ 	86161, 21, 25
+ 	90922, 21, 26
+ 	92691, 21, 27
+ 	102266, 21, 28
+ 	103713, 21, 29
+ 	104430, 21, 30
+ 	108509, 21, 31
+ 	113521, 21, 32
+ 	116031, 21, 33
+ 	126826, 21, 34
+ 	129315, 21, 35
+ 	133222, 21, 36
+ 	1117, 22, 1
+ 	3968, 22, 2
+ 	18070, 22, 3
+ 	21799, 22, 4
+ 	22382, 22, 5
+ 	24055, 22, 6
+ 	27240, 22, 7
+ 	27348, 22, 8
+ 	32244, 22, 9
+ 	38744, 22, 10
+ 	42928, 22, 11
+ 	48026, 22, 12
+ 	49265, 22, 13
+ 	52151, 22, 14
+ 	58579, 22, 15
+ 	60833, 22, 16
+ 	61351, 22, 17
+ 	65780, 22, 18
+ 	69092, 22, 19
+ 	69809, 22, 20
+ 	70081, 22, 21
+ 	73447, 22, 22
+ 	78976, 22, 23
+ 	85341, 22, 24
+ 	86161, 22, 25
+ 	90922, 22, 26
+ 	92691, 22, 27
+ 	102266, 22, 28
+ 	103713, 22, 29
+ 	104430, 22, 30
+ 	108509, 22, 31
+ 	113521, 22, 32
+ 	116031, 22, 33
+ 	126826, 22, 34
+ 	129315, 22, 35
+ 	133222, 22, 36
+ 	1117, 23, 13
+ 	3968, 23, 16
+ 	18070, 23, 36
+ 	21799, 23, 4
+ 	22382, 23, 5
+ 	24055, 23, 6
+ 	27240, 23, 7
+ 	27348, 23, 8
+ 	32244, 23, 9
+ 	38744, 23, 10
+ 	42928, 23, 11
+ 	48026, 23, 12
+ 	49265, 23, 1
+ 	52151, 23, 14
+ 	58579, 23, 15
+ 	60833, 23, 2
+ 	61351, 23, 17
+ 	65780, 23, 18
+ 	69092, 23, 19
+ 	69809, 23, 20
+ 	70081, 23, 21
+ 	73447, 23, 22
+ 	78976, 23, 23
+ 	85341, 23, 24
+ 	86161, 23, 25
+ 	90922, 23, 26
+ 	92691, 23, 27
+ 	102266, 23, 28
+ 	103713, 23, 29
+ 	104430, 23, 30
+ 	108509, 23, 31
+ 	113521, 23, 32
+ 	116031, 23, 33
+ 	126826, 23, 34
+ 	129315, 23, 35
+ 	133222, 23, 3
+ 	1680, 24, 1
+ 	4438, 24, 2
+ 	6878, 24, 3
+ 	7366, 24, 4
+ 	12442, 24, 5
+ 	14258, 24, 6
+ 	14374, 24, 7
+ 	19924, 24, 8
+ 	22139, 24, 9
+ 	35011, 24, 10
+ 	40570, 24, 11
+ 	41195, 24, 12
+ 	47681, 24, 13
+ 	51713, 24, 14
+ 	53338, 24, 15
+ 	58066, 24, 16
+ 	66266, 24, 17
+ 	68396, 24, 18
+ 	71953, 24, 19
+ 	81451, 24, 20
+ 	82279, 24, 21
+ 	95087, 24, 22
+ 	96160, 24, 23
+ 	100626, 24, 24
+ 	102283, 24, 25
+ 	115019, 24, 26
+ 	115293, 24, 27
+ 	117509, 24, 28
+ 	119108, 24, 29
+ 	120267, 24, 30
+ 	121673, 24, 31
+ 	123000, 24, 32
+ 	124620, 24, 33
+ 	126311, 24, 34
+ 	128214, 24, 35
+ 	132797, 24, 36
+ 	1680, 25, 28
+ 	4438, 25, 7
+ 	6878, 25, 17
+ 	7366, 25, 4
+ 	12442, 25, 5
+ 	14258, 25, 6
+ 	14374, 25, 2
+ 	19924, 25, 8
+ 	22139, 25, 9
+ 	35011, 25, 10
+ 	40570, 25, 11
+ 	41195, 25, 12
+ 	47681, 25, 13
+ 	51713, 25, 14
+ 	53338, 25, 15
+ 	58066, 25, 16
+ 	66266, 25, 3
+ 	68396, 25, 18
+ 	71953, 25, 19
+ 	81451, 25, 20
+ 	82279, 25, 21
+ 	95087, 25, 22
+ 	96160, 25, 23
+ 	100626, 25, 24
+ 	102283, 25, 25
+ 	115019, 25, 26
+ 	115293, 25, 27
+ 	117509, 25, 1
+ 	119108, 25, 29
+ 	120267, 25, 30
+ 	121673, 25, 31
+ 	123000, 25, 32
+ 	124620, 25, 33
+ 	126311, 25, 34
+ 	128214, 25, 35
+ 	132797, 25, 36
+ 	1680, 26, 1
+ 	4438, 26, 2
+ 	6878, 26, 3
+ 	7366, 26, 4
+ 	12442, 26, 5
+ 	14258, 26, 6
+ 	14374, 26, 7
+ 	19924, 26, 8
+ 	22139, 26, 9
+ 	35011, 26, 10
+ 	40570, 26, 11
+ 	41195, 26, 12
+ 	47681, 26, 13
+ 	51713, 26, 14
+ 	53338, 26, 15
+ 	58066, 26, 16
+ 	66266, 26, 17
+ 	68396, 26, 18
+ 	71953, 26, 19
+ 	81451, 26, 20
+ 	82279, 26, 21
+ 	95087, 26, 22
+ 	96160, 26, 23
+ 	100626, 26, 24
+ 	102283, 26, 25
+ 	115019, 26, 26
+ 	115293, 26, 27
+ 	117509, 26, 28
+ 	119108, 26, 29
+ 	120267, 26, 30
+ 	121673, 26, 31
+ 	123000, 26, 32
+ 	124620, 26, 33
+ 	126311, 26, 34
+ 	128214, 26, 35
+ 	132797, 26, 36
+ 	368, 27, 1
+ 	1326, 27, 2
+ 	7906, 27, 3
+ 	9026, 27, 4
+ 	9343, 27, 5
+ 	13727, 27, 6
+ 	13797, 27, 7
+ 	15395, 27, 8
+ 	19887, 27, 9
+ 	20243, 27, 10
+ 	21123, 27, 11
+ 	21964, 27, 12
+ 	22146, 27, 13
+ 	23725, 27, 14
+ 	25635, 27, 15
+ 	35906, 27, 16
+ 	49806, 27, 17
+ 	50260, 27, 18
+ 	68852, 27, 19
+ 	68937, 27, 20
+ 	77060, 27, 21
+ 	78248, 27, 22
+ 	88212, 27, 23
+ 	91056, 27, 24
+ 	96582, 27, 25
+ 	99524, 27, 26
+ 	104286, 27, 27
+ 	105844, 27, 28
+ 	114225, 27, 29
+ 	116069, 27, 30
+ 	119229, 27, 31
+ 	123162, 27, 32
+ 	125759, 27, 33
+ 	131111, 27, 34
+ 	132252, 27, 35
+ 	368, 28, 4
+ 	1326, 28, 5
+ 	7906, 28, 7
+ 	9026, 28, 1
+ 	9343, 28, 2
+ 	13727, 28, 6
+ 	13797, 28, 3
+ 	15395, 28, 8
+ 	19887, 28, 9
+ 	20243, 28, 10
+ 	21123, 28, 11
+ 	21964, 28, 12
+ 	22146, 28, 13
+ 	23725, 28, 14
+ 	25635, 28, 15
+ 	35906, 28, 16
+ 	49806, 28, 17
+ 	50260, 28, 18
+ 	68852, 28, 19
+ 	68937, 28, 20
+ 	77060, 28, 21
+ 	78248, 28, 22
+ 	88212, 28, 23
+ 	91056, 28, 24
+ 	96582, 28, 25
+ 	99524, 28, 26
+ 	104286, 28, 27
+ 	105844, 28, 28
+ 	114225, 28, 29
+ 	116069, 28, 30
+ 	119229, 28, 31
+ 	123162, 28, 32
+ 	125759, 28, 33
+ 	131111, 28, 34
+ 	132252, 28, 35
+ 	3968, 29, 1
+ 	7791, 29, 2
+ 	16795, 29, 3
+ 	17537, 29, 4
+ 	17784, 29, 5
+ 	18070, 29, 6
+ 	18112, 29, 7
+ 	18904, 29, 8
+ 	21799, 29, 9
+ 	29446, 29, 10
+ 	37083, 29, 11
+ 	45145, 29, 12
+ 	49611, 29, 13
+ 	50858, 29, 14
+ 	52151, 29, 15
+ 	55615, 29, 16
+ 	60833, 29, 17
+ 	66010, 29, 18
+ 	70081, 29, 19
+ 	78976, 29, 20
+ 	83096, 29, 21
+ 	88778, 29, 22
+ 	89590, 29, 23
+ 	92691, 29, 24
+ 	94363, 29, 25
+ 	99753, 29, 26
+ 	103713, 29, 27
+ 	104430, 29, 28
+ 	112036, 29, 29
+ 	113521, 29, 30
+ 	113806, 29, 31
+ 	124050, 29, 32
+ 	125117, 29, 33
+ 	129091, 29, 34
+ 	3968, 30, 1
+ 	7791, 30, 2
+ 	16795, 30, 3
+ 	17537, 30, 4
+ 	17784, 30, 5
+ 	18070, 30, 6
+ 	18112, 30, 7
+ 	18904, 30, 8
+ 	21799, 30, 9
+ 	29446, 30, 10
+ 	37083, 30, 11
+ 	45145, 30, 12
+ 	49611, 30, 13
+ 	50858, 30, 14
+ 	52151, 30, 15
+ 	55615, 30, 16
+ 	60833, 30, 17
+ 	66010, 30, 18
+ 	70081, 30, 19
+ 	78976, 30, 20
+ 	83096, 30, 21
+ 	88778, 30, 22
+ 	89590, 30, 23
+ 	92691, 30, 24
+ 	94363, 30, 25
+ 	99753, 30, 26
+ 	103713, 30, 27
+ 	104430, 30, 28
+ 	112036, 30, 29
+ 	113521, 30, 30
+ 	113806, 30, 31
+ 	124050, 30, 32
+ 	125117, 30, 33
+ 	129091, 30, 34
+ 	3968, 31, 13
+ 	7791, 31, 24
+ 	16795, 31, 29
+ 	17537, 31, 4
+ 	17784, 31, 5
+ 	18070, 31, 6
+ 	18112, 31, 7
+ 	18904, 31, 8
+ 	21799, 31, 9
+ 	29446, 31, 10
+ 	37083, 31, 11
+ 	45145, 31, 12
+ 	49611, 31, 1
+ 	50858, 31, 14
+ 	52151, 31, 15
+ 	55615, 31, 16
+ 	60833, 31, 17
+ 	66010, 31, 18
+ 	70081, 31, 19
+ 	78976, 31, 20
+ 	83096, 31, 21
+ 	88778, 31, 22
+ 	89590, 31, 23
+ 	92691, 31, 2
+ 	94363, 31, 25
+ 	99753, 31, 26
+ 	103713, 31, 27
+ 	104430, 31, 28
+ 	112036, 31, 3
+ 	113521, 31, 30
+ 	113806, 31, 31
+ 	124050, 31, 32
+ 	125117, 31, 33
+ 	129091, 31, 34
+ 	3075, 32, 23
+ 	3485, 32, 22
+ 	5001, 32, 12
+ 	8110, 32, 4
+ 	13352, 32, 5
+ 	16555, 32, 6
+ 	20243, 32, 7
+ 	21628, 32, 8
+ 	24562, 32, 9
+ 	28121, 32, 10
+ 	30393, 32, 11
+ 	39508, 32, 3
+ 	51723, 32, 13
+ 	52788, 32, 14
+ 	54009, 32, 15
+ 	56947, 32, 16
+ 	64684, 32, 17
+ 	76942, 32, 18
+ 	83422, 32, 19
+ 	85472, 32, 20
+ 	96582, 32, 21
+ 	97270, 32, 2
+ 	105429, 32, 1
+ 	106101, 32, 24
+ 	106731, 32, 25
+ 	108896, 32, 26
+ 	112231, 32, 27
+ 	115596, 32, 28
+ 	117552, 32, 29
+ 	118739, 32, 30
+ 	122611, 32, 31
+ 	126978, 32, 32
+ 	128084, 32, 33
+ 	135220, 32, 34
+ 	5279, 33, 1
+ 	7254, 33, 2
+ 	12417, 33, 3
+ 	15164, 33, 4
+ 	22351, 33, 5
+ 	23084, 33, 6
+ 	25546, 33, 7
+ 	28008, 33, 8
+ 	30829, 33, 9
+ 	36332, 33, 10
+ 	45004, 33, 11
+ 	55293, 33, 12
+ 	61536, 33, 13
+ 	69632, 33, 14
+ 	73872, 33, 15
+ 	81728, 33, 16
+ 	81789, 33, 17
+ 	82836, 33, 18
+ 	84019, 33, 19
+ 	89199, 33, 20
+ 	90034, 33, 21
+ 	91673, 33, 22
+ 	91875, 33, 23
+ 	100711, 33, 24
+ 	103999, 33, 25
+ 	107349, 33, 26
+ 	113167, 33, 27
+ 	114949, 33, 28
+ 	115500, 33, 29
+ 	116066, 33, 30
+ 	121531, 33, 31
+ 	122162, 33, 32
+ 	129893, 33, 33
+ 	5279, 34, 1
+ 	7254, 34, 2
+ 	12417, 34, 3
+ 	15164, 34, 4
+ 	22351, 34, 5
+ 	23084, 34, 6
+ 	25546, 34, 7
+ 	28008, 34, 8
+ 	30829, 34, 9
+ 	36332, 34, 10
+ 	45004, 34, 11
+ 	55293, 34, 12
+ 	61536, 34, 13
+ 	69632, 34, 14
+ 	73872, 34, 15
+ 	81728, 34, 16
+ 	81789, 34, 17
+ 	82836, 34, 18
+ 	84019, 34, 19
+ 	89199, 34, 20
+ 	90034, 34, 21
+ 	91673, 34, 22
+ 	91875, 34, 23
+ 	100711, 34, 24
+ 	103999, 34, 25
+ 	107349, 34, 26
+ 	113167, 34, 27
+ 	114949, 34, 28
+ 	115500, 34, 29
+ 	116066, 34, 30
+ 	121531, 34, 31
+ 	122162, 34, 32
+ 	129893, 34, 33
+ 	5279, 35, 7
+ 	7254, 35, 11
+ 	12417, 35, 21
+ 	15164, 35, 4
+ 	22351, 35, 5
+ 	23084, 35, 6
+ 	25546, 35, 1
+ 	28008, 35, 8
+ 	30829, 35, 9
+ 	36332, 35, 10
+ 	45004, 35, 2
+ 	55293, 35, 12
+ 	61536, 35, 13
+ 	69632, 35, 14
+ 	73872, 35, 15
+ 	81728, 35, 16
+ 	81789, 35, 17
+ 	82836, 35, 18
+ 	84019, 35, 19
+ 	89199, 35, 20
+ 	90034, 35, 3
+ 	91673, 35, 22
+ 	91875, 35, 23
+ 	100711, 35, 24
+ 	103999, 35, 25
+ 	107349, 35, 26
+ 	113167, 35, 27
+ 	114949, 35, 28
+ 	115500, 35, 29
+ 	116066, 35, 30
+ 	121531, 35, 31
+ 	122162, 35, 32
+ 	129893, 35, 33
+ 	4630, 36, 26
+ 	5991, 36, 31
+ 	6123, 36, 4
+ 	9998, 36, 3
+ 	11350, 36, 5
+ 	18383, 36, 6
+ 	20178, 36, 7
+ 	26496, 36, 8
+ 	28455, 36, 9
+ 	30920, 36, 10
+ 	31125, 36, 11
+ 	47103, 36, 12
+ 	48215, 36, 13
+ 	48940, 36, 14
+ 	60774, 36, 15
+ 	65014, 36, 16
+ 	66533, 36, 17
+ 	68996, 36, 18
+ 	71222, 36, 19
+ 	74350, 36, 20
+ 	98523, 36, 21
+ 	111977, 36, 22
+ 	112124, 36, 23
+ 	120187, 36, 24
+ 	120261, 36, 25
+ 	121078, 36, 1
+ 	121724, 36, 27
+ 	125759, 36, 28
+ 	127381, 36, 29
+ 	127816, 36, 30
+ 	128039, 36, 2
+ 	129755, 36, 32
+ 	131762, 36, 33
+ 	1482, 37, 5
+ 	4495, 37, 12
+ 	8455, 37, 6
+ 	16188, 37, 4
+ 	17324, 37, 1
+ 	20609, 37, 3
+ 	31051, 37, 7
+ 	32232, 37, 8
+ 	32522, 37, 9
+ 	51650, 37, 10
+ 	55715, 37, 11
+ 	59700, 37, 2
+ 	60859, 37, 13
+ 	62896, 37, 14
+ 	71953, 37, 15
+ 	91027, 37, 16
+ 	97303, 37, 17
+ 	98538, 37, 18
+ 	100577, 37, 19
+ 	106703, 37, 20
+ 	112208, 37, 21
+ 	113297, 37, 22
+ 	115675, 37, 23
+ 	116308, 37, 24
+ 	118162, 37, 25
+ 	123251, 37, 26
+ 	125010, 37, 27
+ 	130287, 37, 28
+ 	130787, 37, 29
+ 	130980, 37, 30
+ 	132797, 37, 31
+ 	133530, 37, 32
+ 	134208, 37, 33
+ 	703, 38, 1
+ 	3471, 38, 2
+ 	4495, 38, 3
+ 	7581, 38, 4
+ 	8703, 38, 5
+ 	10835, 38, 6
+ 	13571, 38, 7
+ 	19271, 38, 8
+ 	25226, 38, 9
+ 	29566, 38, 10
+ 	32522, 38, 11
+ 	35991, 38, 12
+ 	45215, 38, 13
+ 	45785, 38, 14
+ 	63423, 38, 15
+ 	65899, 38, 16
+ 	69967, 38, 17
+ 	71953, 38, 18
+ 	79462, 38, 19
+ 	93833, 38, 20
+ 	96151, 38, 21
+ 	101492, 38, 22
+ 	102215, 38, 23
+ 	108035, 38, 24
+ 	112751, 38, 25
+ 	117219, 38, 26
+ 	120267, 38, 27
+ 	120311, 38, 28
+ 	123178, 38, 29
+ 	126246, 38, 30
+ 	130787, 38, 31
+ 	130980, 38, 32
+ 	133530, 38, 33
+ 	703, 39, 19
+ 	3471, 39, 26
+ 	4495, 39, 15
+ 	7581, 39, 4
+ 	8703, 39, 5
+ 	10835, 39, 6
+ 	13571, 39, 7
+ 	19271, 39, 8
+ 	25226, 39, 9
+ 	29566, 39, 10
+ 	32522, 39, 11
+ 	35991, 39, 12
+ 	45215, 39, 13
+ 	45785, 39, 14
+ 	63423, 39, 3
+ 	65899, 39, 16
+ 	69967, 39, 17
+ 	71953, 39, 18
+ 	79462, 39, 1
+ 	93833, 39, 20
+ 	96151, 39, 21
+ 	101492, 39, 22
+ 	102215, 39, 23
+ 	108035, 39, 24
+ 	112751, 39, 25
+ 	117219, 39, 2
+ 	120267, 39, 27
+ 	120311, 39, 28
+ 	123178, 39, 29
+ 	126246, 39, 30
+ 	130787, 39, 31
+ 	130980, 39, 32
+ 	133530, 39, 33
+ 	296, 40, 1
+ 	11712, 40, 2
+ 	15366, 40, 3
+ 	22941, 40, 4
+ 	31085, 40, 5
+ 	37235, 40, 6
+ 	38619, 40, 7
+ 	39329, 40, 8
+ 	41808, 40, 9
+ 	47515, 40, 10
+ 	47664, 40, 11
+ 	55449, 40, 12
+ 	59066, 40, 13
+ 	61536, 40, 14
+ 	74003, 40, 15
+ 	77772, 40, 16
+ 	88772, 40, 17
+ 	95727, 40, 18
+ 	97835, 40, 19
+ 	105133, 40, 20
+ 	105845, 40, 21
+ 	107590, 40, 22
+ 	109634, 40, 23
+ 	111735, 40, 24
+ 	113167, 40, 25
+ 	122646, 40, 26
+ 	125096, 40, 27
+ 	129471, 40, 28
+ 	130082, 40, 29
+ 	133430, 40, 30
+ 	296, 41, 10
+ 	11712, 41, 11
+ 	15366, 41, 23
+ 	22941, 41, 4
+ 	31085, 41, 5
+ 	37235, 41, 6
+ 	38619, 41, 7
+ 	39329, 41, 8
+ 	41808, 41, 9
+ 	47515, 41, 1
+ 	47664, 41, 2
+ 	55449, 41, 12
+ 	59066, 41, 13
+ 	61536, 41, 14
+ 	74003, 41, 15
+ 	77772, 41, 16
+ 	88772, 41, 17
+ 	95727, 41, 18
+ 	97835, 41, 19
+ 	105133, 41, 20
+ 	105845, 41, 21
+ 	107590, 41, 22
+ 	109634, 41, 3
+ 	111735, 41, 24
+ 	113167, 41, 25
+ 	122646, 41, 26
+ 	125096, 41, 27
+ 	129471, 41, 28
+ 	130082, 41, 29
+ 	133430, 41, 30
+ 	296, 42, 1
+ 	11712, 42, 2
+ 	15366, 42, 3
+ 	22941, 42, 4
+ 	31085, 42, 5
+ 	37235, 42, 6
+ 	38619, 42, 7
+ 	39329, 42, 8
+ 	41808, 42, 9
+ 	47515, 42, 10
+ 	47664, 42, 11
+ 	55449, 42, 12
+ 	59066, 42, 13
+ 	61536, 42, 14
+ 	74003, 42, 15
+ 	77772, 42, 16
+ 	88772, 42, 17
+ 	95727, 42, 18
+ 	97835, 42, 19
+ 	105133, 42, 20
+ 	105845, 42, 21
+ 	107590, 42, 22
+ 	109634, 42, 23
+ 	111735, 42, 24
+ 	113167, 42, 25
+ 	122646, 42, 26
+ 	125096, 42, 27
+ 	129471, 42, 28
+ 	130082, 42, 29
+ 	133430, 42, 30
+ 	8455, 43, 19
+ 	10172, 43, 4
+ 	10996, 43, 1
+ 	12442, 43, 2
+ 	12648, 43, 5
+ 	15582, 43, 6
+ 	20142, 43, 7
+ 	20912, 43, 8
+ 	23543, 43, 9
+ 	30039, 43, 10
+ 	35581, 43, 11
+ 	42122, 43, 12
+ 	42637, 43, 13
+ 	44824, 43, 14
+ 	47671, 43, 15
+ 	82279, 43, 16
+ 	83302, 43, 17
+ 	86767, 43, 18
+ 	92563, 43, 3
+ 	93069, 43, 20
+ 	101492, 43, 21
+ 	108005, 43, 22
+ 	109666, 43, 23
+ 	110884, 43, 24
+ 	115862, 43, 25
+ 	124377, 43, 26
+ 	125930, 43, 27
+ 	126311, 43, 28
+ 	128214, 43, 29
+ 	15669, 44, 18
+ 	18300, 44, 15
+ 	25157, 44, 3
+ 	34006, 44, 4
+ 	37960, 44, 5
+ 	43503, 44, 6
+ 	47661, 44, 7
+ 	50680, 44, 8
+ 	56182, 44, 9
+ 	57858, 44, 10
+ 	63666, 44, 11
+ 	71588, 44, 12
+ 	78041, 44, 13
+ 	78659, 44, 14
+ 	79780, 44, 2
+ 	85426, 44, 16
+ 	85779, 44, 17
+ 	88073, 44, 1
+ 	94564, 44, 19
+ 	97379, 44, 20
+ 	99760, 44, 21
+ 	99806, 44, 22
+ 	106642, 44, 23
+ 	110584, 44, 24
+ 	117848, 44, 25
+ 	118385, 44, 26
+ 	119029, 44, 27
+ 	15669, 45, 1
+ 	18300, 45, 2
+ 	25157, 45, 3
+ 	34006, 45, 4
+ 	37960, 45, 5
+ 	43503, 45, 6
+ 	47661, 45, 7
+ 	50680, 45, 8
+ 	56182, 45, 9
+ 	57858, 45, 10
+ 	63666, 45, 11
+ 	71588, 45, 12
+ 	78041, 45, 13
+ 	78659, 45, 14
+ 	79780, 45, 15
+ 	85426, 45, 16
+ 	85779, 45, 17
+ 	88073, 45, 18
+ 	94564, 45, 19
+ 	97379, 45, 20
+ 	99760, 45, 21
+ 	99806, 45, 22
+ 	106642, 45, 23
+ 	110584, 45, 24
+ 	117848, 45, 25
+ 	118385, 45, 26
+ 	119029, 45, 27
+ 	16239, 46, 10
+ 	23546, 46, 7
+ 	47215, 46, 8
+ 	47902, 46, 4
+ 	49869, 46, 5
+ 	53598, 46, 6
+ 	60544, 46, 2
+ 	64805, 46, 3
+ 	69793, 46, 9
+ 	72466, 46, 1
+ 	83607, 46, 11
+ 	85264, 46, 12
+ 	85513, 46, 13
+ 	86195, 46, 14
+ 	86363, 46, 15
+ 	90366, 46, 16
+ 	92799, 46, 17
+ 	104842, 46, 18
+ 	110229, 46, 19
+ 	111255, 46, 20
+ 	114921, 46, 21
+ 	115427, 46, 22
+ 	121740, 46, 23
+ 	125759, 46, 24
+ 	127441, 46, 25
+ 	131336, 46, 26
+ 	131952, 46, 27
+ 	3471, 47, 1
+ 	4438, 47, 2
+ 	8335, 47, 3
+ 	10835, 47, 4
+ 	13571, 47, 5
+ 	19271, 47, 6
+ 	38476, 47, 7
+ 	47610, 47, 8
+ 	60830, 47, 9
+ 	69967, 47, 10
+ 	71075, 47, 11
+ 	79462, 47, 12
+ 	88023, 47, 13
+ 	91696, 47, 14
+ 	100909, 47, 15
+ 	101492, 47, 16
+ 	102215, 47, 17
+ 	102599, 47, 18
+ 	105826, 47, 19
+ 	113297, 47, 20
+ 	117509, 47, 21
+ 	118162, 47, 22
+ 	126816, 47, 23
+ 	128980, 47, 24
+ 	130031, 47, 25
+ 	130198, 47, 26
+ 	130787, 47, 27
+ 	3471, 48, 1
+ 	4438, 48, 2
+ 	8335, 48, 3
+ 	10835, 48, 4
+ 	13571, 48, 5
+ 	19271, 48, 6
+ 	38476, 48, 7
+ 	47610, 48, 8
+ 	60830, 48, 9
+ 	69967, 48, 10
+ 	71075, 48, 11
+ 	79462, 48, 12
+ 	88023, 48, 13
+ 	91696, 48, 14
+ 	100909, 48, 15
+ 	101492, 48, 16
+ 	102215, 48, 17
+ 	102599, 48, 18
+ 	105826, 48, 19
+ 	113297, 48, 20
+ 	117509, 48, 21
+ 	118162, 48, 22
+ 	126816, 48, 23
+ 	128980, 48, 24
+ 	130031, 48, 25
+ 	130198, 48, 26
+ 	130787, 48, 27
+ 	3471, 49, 23
+ 	4438, 49, 14
+ 	8335, 49, 22
+ 	10835, 49, 4
+ 	13571, 49, 5
+ 	19271, 49, 6
+ 	38476, 49, 7
+ 	47610, 49, 8
+ 	60830, 49, 9
+ 	69967, 49, 10
+ 	71075, 49, 11
+ 	79462, 49, 12
+ 	88023, 49, 13
+ 	91696, 49, 2
+ 	100909, 49, 15
+ 	101492, 49, 16
+ 	102215, 49, 17
+ 	102599, 49, 18
+ 	105826, 49, 19
+ 	113297, 49, 20
+ 	117509, 49, 21
+ 	118162, 49, 3
+ 	126816, 49, 1
+ 	128980, 49, 24
+ 	130031, 49, 25
+ 	130198, 49, 26
+ 	130787, 49, 27
+ 	15508, 50, 13
+ 	16667, 50, 20
+ 	20539, 50, 6
+ 	30767, 50, 4
+ 	32919, 50, 5
+ 	41360, 50, 3
+ 	44824, 50, 7
+ 	49112, 50, 8
+ 	54192, 50, 9
+ 	58457, 50, 10
+ 	63690, 50, 11
+ 	71804, 50, 12
+ 	74525, 50, 1
+ 	86273, 50, 14
+ 	88661, 50, 15
+ 	90563, 50, 16
+ 	94794, 50, 17
+ 	96514, 50, 18
+ 	109666, 50, 19
+ 	110423, 50, 2
+ 	118949, 50, 21
+ 	124415, 50, 22
+ 	130194, 50, 23
+ 	135009, 50, 24
+ 	7943, 51, 13
+ 	8460, 51, 18
+ 	12039, 51, 15
+ 	13113, 51, 4
+ 	17463, 51, 5
+ 	21657, 51, 6
+ 	24069, 51, 7
+ 	27600, 51, 8
+ 	33810, 51, 9
+ 	43349, 51, 10
+ 	44045, 51, 11
+ 	50471, 51, 12
+ 	50752, 51, 1
+ 	52162, 51, 14
+ 	63621, 51, 3
+ 	67440, 51, 16
+ 	81539, 51, 17
+ 	88485, 51, 2
+ 	99684, 51, 19
+ 	103347, 51, 20
+ 	107155, 51, 21
+ 	109885, 51, 22
+ 	123970, 51, 23
+ 	129057, 51, 24
+ 	7943, 52, 1
+ 	8460, 52, 2
+ 	12039, 52, 3
+ 	13113, 52, 4
+ 	17463, 52, 5
+ 	21657, 52, 6
+ 	24069, 52, 7
+ 	27600, 52, 8
+ 	33810, 52, 9
+ 	43349, 52, 10
+ 	44045, 52, 11
+ 	50471, 52, 12
+ 	50752, 52, 13
+ 	52162, 52, 14
+ 	63621, 52, 15
+ 	67440, 52, 16
+ 	81539, 52, 17
+ 	88485, 52, 18
+ 	99684, 52, 19
+ 	103347, 52, 20
+ 	107155, 52, 21
+ 	109885, 52, 22
+ 	123970, 52, 23
+ 	129057, 52, 24
+ 	2269, 53, 1
+ 	7994, 53, 2
+ 	12264, 53, 3
+ 	12340, 53, 4
+ 	16367, 53, 5
+ 	18549, 53, 6
+ 	25837, 53, 7
+ 	32619, 53, 8
+ 	52431, 53, 9
+ 	68394, 53, 10
+ 	74229, 53, 11
+ 	83718, 53, 12
+ 	86247, 53, 13
+ 	86576, 53, 14
+ 	86915, 53, 15
+ 	91239, 53, 16
+ 	93044, 53, 17
+ 	94308, 53, 18
+ 	106908, 53, 19
+ 	108072, 53, 20
+ 	112842, 53, 21
+ 	131762, 53, 22
+ 	131965, 53, 23
+ 	2269, 54, 20
+ 	7994, 54, 19
+ 	12264, 54, 15
+ 	12340, 54, 4
+ 	16367, 54, 5
+ 	18549, 54, 6
+ 	25837, 54, 7
+ 	32619, 54, 8
+ 	52431, 54, 9
+ 	68394, 54, 10
+ 	74229, 54, 11
+ 	83718, 54, 12
+ 	86247, 54, 13
+ 	86576, 54, 14
+ 	86915, 54, 3
+ 	91239, 54, 16
+ 	93044, 54, 17
+ 	94308, 54, 18
+ 	106908, 54, 2
+ 	108072, 54, 1
+ 	112842, 54, 21
+ 	131762, 54, 22
+ 	131965, 54, 23
+ 	2269, 55, 1
+ 	7994, 55, 2
+ 	12264, 55, 3
+ 	12340, 55, 4
+ 	16367, 55, 5
+ 	18549, 55, 6
+ 	25837, 55, 7
+ 	32619, 55, 8
+ 	52431, 55, 9
+ 	68394, 55, 10
+ 	74229, 55, 11
+ 	83718, 55, 12
+ 	86247, 55, 13
+ 	86576, 55, 14
+ 	86915, 55, 15
+ 	91239, 55, 16
+ 	93044, 55, 17
+ 	94308, 55, 18
+ 	106908, 55, 19
+ 	108072, 55, 20
+ 	112842, 55, 21
+ 	131762, 55, 22
+ 	131965, 55, 23
+ 	3468, 56, 22
+ 	8761, 56, 12
+ 	11145, 56, 15
+ 	16607, 56, 4
+ 	18834, 56, 5
+ 	22698, 56, 6
+ 	31344, 56, 7
+ 	33773, 56, 8
+ 	44991, 56, 9
+ 	46387, 56, 10
+ 	52485, 56, 11
+ 	61238, 56, 2
+ 	62401, 56, 13
+ 	64896, 56, 14
+ 	71719, 56, 3
+ 	75764, 56, 16
+ 	81778, 56, 17
+ 	92409, 56, 18
+ 	109424, 56, 19
+ 	116206, 56, 20
+ 	119550, 56, 21
+ 	135313, 56, 1
+ 	3468, 57, 1
+ 	8761, 57, 2
+ 	11145, 57, 3
+ 	16607, 57, 4
+ 	18834, 57, 5
+ 	22698, 57, 6
+ 	31344, 57, 7
+ 	33773, 57, 8
+ 	44991, 57, 9
+ 	46387, 57, 10
+ 	52485, 57, 11
+ 	61238, 57, 12
+ 	62401, 57, 13
+ 	64896, 57, 14
+ 	71719, 57, 15
+ 	75764, 57, 16
+ 	81778, 57, 17
+ 	92409, 57, 18
+ 	109424, 57, 19
+ 	116206, 57, 20
+ 	119550, 57, 21
+ 	135313, 57, 22
+ 	3468, 58, 1
+ 	8761, 58, 2
+ 	11145, 58, 3
+ 	16607, 58, 4
+ 	18834, 58, 5
+ 	22698, 58, 6
+ 	31344, 58, 7
+ 	33773, 58, 8
+ 	44991, 58, 9
+ 	46387, 58, 10
+ 	52485, 58, 11
+ 	61238, 58, 12
+ 	62401, 58, 13
+ 	64896, 58, 14
+ 	71719, 58, 15
+ 	75764, 58, 16
+ 	81778, 58, 17
+ 	92409, 58, 18
+ 	109424, 58, 19
+ 	116206, 58, 20
+ 	119550, 58, 21
+ 	135313, 58, 22
+ 	9337, 59, 1
+ 	11711, 59, 2
+ 	22493, 59, 3
+ 	40792, 59, 4
+ 	42160, 59, 5
+ 	44060, 59, 6
+ 	47943, 59, 7
+ 	49132, 59, 8
+ 	50680, 59, 9
+ 	56182, 59, 10
+ 	62308, 59, 11
+ 	68662, 59, 12
+ 	73402, 59, 13
+ 	76534, 59, 14
+ 	78659, 59, 15
+ 	79979, 59, 16
+ 	118985, 59, 17
+ 	125325, 59, 18
+ 	131541, 59, 19
+ 	9337, 60, 14
+ 	11711, 60, 19
+ 	22493, 60, 6
+ 	40792, 60, 4
+ 	42160, 60, 5
+ 	44060, 60, 3
+ 	47943, 60, 7
+ 	49132, 60, 8
+ 	50680, 60, 9
+ 	56182, 60, 10
+ 	62308, 60, 11
+ 	68662, 60, 12
+ 	73402, 60, 13
+ 	76534, 60, 1
+ 	78659, 60, 15
+ 	79979, 60, 16
+ 	118985, 60, 17
+ 	125325, 60, 18
+ 	131541, 60, 2
+ 	10334, 61, 8
+ 	19040, 61, 16
+ 	25456, 61, 7
+ 	26314, 61, 4
+ 	35279, 61, 5
+ 	51879, 61, 6
+ 	61105, 61, 3
+ 	74549, 61, 1
+ 	82385, 61, 9
+ 	83455, 61, 10
+ 	90012, 61, 11
+ 	96192, 61, 12
+ 	101301, 61, 13
+ 	113831, 61, 14
+ 	115980, 61, 15
+ 	129833, 61, 2
+ 	4487, 62, 1
+ 	6942, 62, 2
+ 	24871, 62, 3
+ 	33525, 62, 4
+ 	37189, 62, 5
+ 	53697, 62, 6
+ 	54068, 62, 7
+ 	62271, 62, 8
+ 	63897, 62, 9
+ 	67108, 62, 10
+ 	85275, 62, 11
+ 	92995, 62, 12
+ 	95407, 62, 13
+ 	115672, 62, 14
+ 	122448, 62, 15
+ 	123432, 62, 16
+ 	4487, 63, 1
+ 	6942, 63, 2
+ 	24871, 63, 3
+ 	33525, 63, 4
+ 	37189, 63, 5
+ 	53697, 63, 6
+ 	54068, 63, 7
+ 	62271, 63, 8
+ 	63897, 63, 9
+ 	67108, 63, 10
+ 	85275, 63, 11
+ 	92995, 63, 12
+ 	95407, 63, 13
+ 	115672, 63, 14
+ 	122448, 63, 15
+ 	123432, 63, 16
+ 	4487, 64, 11
+ 	6942, 64, 12
+ 	24871, 64, 6
+ 	33525, 64, 4
+ 	37189, 64, 5
+ 	53697, 64, 3
+ 	54068, 64, 7
+ 	62271, 64, 8
+ 	63897, 64, 9
+ 	67108, 64, 10
+ 	85275, 64, 1
+ 	92995, 64, 2
+ 	95407, 64, 13
+ 	115672, 64, 14
+ 	122448, 64, 15
+ 	123432, 64, 16
+ 	6724, 65, 1
+ 	12769, 65, 2
+ 	14302, 65, 3
+ 	20892, 65, 4
+ 	37418, 65, 5
+ 	47480, 65, 6
+ 	59459, 65, 7
+ 	66432, 65, 8
+ 	75835, 65, 9
+ 	81152, 65, 10
+ 	106544, 65, 11
+ 	108322, 65, 12
+ 	112977, 65, 13
+ 	124808, 65, 14
+ 	6724, 66, 6
+ 	12769, 66, 8
+ 	14302, 66, 4
+ 	20892, 66, 3
+ 	37418, 66, 5
+ 	47480, 66, 1
+ 	59459, 66, 7
+ 	66432, 66, 2
+ 	75835, 66, 9
+ 	81152, 66, 10
+ 	106544, 66, 11
+ 	108322, 66, 12
+ 	112977, 66, 13
+ 	124808, 66, 14
+ 	6724, 67, 1
+ 	12769, 67, 2
+ 	14302, 67, 3
+ 	20892, 67, 4
+ 	37418, 67, 5
+ 	47480, 67, 6
+ 	59459, 67, 7
+ 	66432, 67, 8
+ 	75835, 67, 9
+ 	81152, 67, 10
+ 	106544, 67, 11
+ 	108322, 67, 12
+ 	112977, 67, 13
+ 	124808, 67, 14 
+}
+
+EventMedals = { 
+	idAthlete:number, idEvent:number, medal:string 
+	42662, 4, 'Bronze'
+ 	48696, 4, 'Gold'
+ 	79915, 4, 'Silver'
+ 	38252, 20, 'Bronze'
+ 	119147, 20, 'Gold'
+ 	131283, 20, 'Silver'
+ 	25546, 35, 'Gold'
+ 	45004, 35, 'Silver'
+ 	90034, 35, 'Bronze'
+ 	58429, 8, 'Gold'
+ 	103917, 8, 'Silver'
+ 	122606, 8, 'Bronze'
+ 	49611, 31, 'Gold'
+ 	92691, 31, 'Silver'
+ 	112036, 31, 'Bronze'
+ 	18290, 11, 'Bronze'
+ 	86955, 11, 'Silver'
+ 	112418, 11, 'Gold'
+ 	11864, 16, 'Gold'
+ 	61934, 16, 'Silver'
+ 	133205, 16, 'Bronze'
+ 	33457, 5, 'Gold'
+ 	36996, 5, 'Bronze'
+ 	53493, 5, 'Silver'
+ 	47515, 41, 'Gold'
+ 	47664, 41, 'Silver'
+ 	109634, 41, 'Bronze'
+ 	49265, 23, 'Gold'
+ 	60833, 23, 'Silver'
+ 	133222, 23, 'Bronze'
+ 	38252, 18, 'Gold'
+ 	58429, 18, 'Silver'
+ 	119147, 18, 'Bronze'
+ 	29655, 12, 'Gold'
+ 	34151, 12, 'Bronze'
+ 	60620, 12, 'Silver'
+ 	9998, 36, 'Bronze'
+ 	121078, 36, 'Gold'
+ 	128039, 36, 'Silver'
+ 	25157, 44, 'Bronze'
+ 	79780, 44, 'Silver'
+ 	88073, 44, 'Gold'
+ 	61238, 56, 'Silver'
+ 	71719, 56, 'Bronze'
+ 	135313, 56, 'Gold'
+ 	18683, 19, 'Silver'
+ 	36401, 19, 'Gold'
+ 	39163, 19, 'Bronze'
+ 	60544, 46, 'Silver'
+ 	64805, 46, 'Bronze'
+ 	72466, 46, 'Gold'
+ 	9026, 28, 'Gold'
+ 	9343, 28, 'Silver'
+ 	13797, 28, 'Bronze'
+ 	60401, 3, 'Silver'
+ 	103792, 3, 'Bronze'
+ 	131283, 3, 'Gold'
+ 	86915, 54, 'Bronze'
+ 	106908, 54, 'Silver'
+ 	108072, 54, 'Gold'
+ 	44060, 60, 'Bronze'
+ 	76534, 60, 'Gold'
+ 	131541, 60, 'Silver'
+ 	39508, 32, 'Bronze'
+ 	97270, 32, 'Silver'
+ 	105429, 32, 'Gold'
+ 	35011, 14, 'Silver'
+ 	117509, 14, 'Bronze'
+ 	123000, 14, 'Gold'
+ 	14374, 25, 'Silver'
+ 	66266, 25, 'Bronze'
+ 	117509, 25, 'Gold'
+ 	10996, 43, 'Gold'
+ 	12442, 43, 'Silver'
+ 	92563, 43, 'Bronze'
+ 	17324, 37, 'Gold'
+ 	20609, 37, 'Bronze'
+ 	59700, 37, 'Silver'
+ 	41360, 50, 'Bronze'
+ 	74525, 50, 'Gold'
+ 	110423, 50, 'Silver'
+ 	61105, 61, 'Bronze'
+ 	74549, 61, 'Gold'
+ 	129833, 61, 'Silver'
+ 	50752, 51, 'Gold'
+ 	63621, 51, 'Bronze'
+ 	88485, 51, 'Silver'
+ 	53697, 64, 'Bronze'
+ 	85275, 64, 'Gold'
+ 	92995, 64, 'Silver'
+ 	91696, 49, 'Silver'
+ 	118162, 49, 'Bronze'
+ 	126816, 49, 'Gold'
+ 	63423, 39, 'Bronze'
+ 	79462, 39, 'Gold'
+ 	117219, 39, 'Silver'
+ 	20892, 66, 'Bronze'
+ 	47480, 66, 'Gold'
+ 	66432, 66, 'Silver' 
+}
+
