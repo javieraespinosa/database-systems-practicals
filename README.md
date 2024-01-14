@@ -17,7 +17,7 @@ The repository is part of the [Database Systems](http://vargas-solar.com/db-fund
 
 The Olympics DB can be load and query using the Relational Algebra (Relax) Calculator:
 
-* [Olympics DB relax calculator](https://dbis-uibk.github.io/relax/calc/gist/e1e2263984fa0305c8a836159369bad0)
+* Try it: [Olympics DB in the relax calculator](https://dbis-uibk.github.io/relax/calc/gist/e1e2263984fa0305c8a836159369bad0)
 
 The Olympic DB relax schema is in [olympics-db/olympics-relax.txt](olympics-db/olympics-relax.txt).
 
